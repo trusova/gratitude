@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>What are you grateful for?</b>
+  <%= @blessing.answer %>
+</p>
+
+<%= link_to 'Edit', edit_blessing_path(@blessing) %> |
+<%= link_to 'Back', blessings_path %>

@@ -1,0 +1,2 @@
+module BlessingsHelper
+end

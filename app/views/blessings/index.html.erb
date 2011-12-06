@@ -1,0 +1,23 @@
+<h1>30 days of gratitude</h1>
+
+<table>
+  <tr>
+    <th>What are you grateful for today?</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @blessings.each do |blessing| %>
+  <tr>
+    <td><%= blessing.answer %></td>
+    <td><%= link_to 'Show', blessing %></td>
+    <td><%= link_to 'Edit', edit_blessing_path(blessing) %></td>
+    <td><%= link_to 'Destroy', blessing, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gratitude', new_blessing_path %>
