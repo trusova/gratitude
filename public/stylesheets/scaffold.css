@@ -8,17 +8,15 @@ body, p, ol, ul, td {
 h1 {
   color: #0091CE;
   font-size: 32px;
-  margin-left: auto;
   margin-top: 60px;
-  width: 770px;
+  text-align: center;
 }
 
 div.info {
   font-size: 18px;
-  margin-left: auto;
   margin-top: 10px;
-  width: 1000px;
   color: #B3B3B3;
+  text-align: center;
 }
 
 div.day_counter {
@@ -30,11 +28,12 @@ div.day_counter {
 div.main {
   margin-left: auto;
   margin-top: 50px;
-  width: 820px;
+  width: 800px;
 }
 
 div.gratitudes {
   color: #B3B3B3;
+  text-align: left;
 }
 
 div.days {
