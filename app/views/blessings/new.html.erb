@@ -1,3 +1,8 @@
+<div class="dashboard">
+  <div class="figure1" id="figure1">
+    <div class="figure2" id="figure2">
+      <div class="figure3" id="figure3">
+          <div class="rainbow">
 <div class="info">
 <a href="http://chass.ucr.edu/faculty_book/lyubomirsky/" target="_blank">Research</a>
 shows that recording 3 gratitudes a day for 30 days can rewire your brain and make you happier...
@@ -6,8 +11,8 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
 
 <h1>30 days of gratitude</h1>
 
-<div class="main">
-  
+  <div class="main">
+    
 <%= render 'form' %>
 
  
@@ -24,12 +29,27 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
 
   <li><%= blessing.answer %></li>
 
+  <% if counter == 1 %>
+  <script type="text/javascript">
+      document.getElementById('figure1').style.visibility = 'visible';
+   </script>
+  <% end %>
+  
+    <% if counter == 2 %>
+  <script type="text/javascript">
+      document.getElementById('figure2').style.visibility = 'visible';
+   </script>
+  <% end %>
+
   <% if counter == 3 %>
   </ol>
-  <div class="days" id="days">
+   <script type="text/javascript">
+      document.getElementById('figure3').style.visibility = 'visible';
+   </script>
+ <!-- <div class="days" id="days">
     <div class="day_counter">Day <%=days/3 %></div>
   <div class="line"></div>
-  </div>
+  </div>-->
   <ol id="gratitude">
     <% counter = 0 %>
     <% end %>
@@ -39,6 +59,10 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
 <% end %>
   </ol>
 </div>
-
+  </div>
+  </div>
+      </div>
+    </div>
+</div>
 </div>
 <!--<%= link_to 'Back', blessings_path %>-->

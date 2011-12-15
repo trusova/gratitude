@@ -11,7 +11,9 @@ gem "devise", "1.2.1"
 gem "engineyard", "1.3.17"
 gem "jquery-rails"
 gem "omniauth", "0.2.3"
+gem "omninauth-facebook"
 gem 'aws-ses', "0.4.2", :require => 'aws/ses'
+gem 'friendly_id', "3.2.1"
 
 group :test, :development do
   gem "rspec-rails", "2.5.0"
