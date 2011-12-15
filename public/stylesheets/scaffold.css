@@ -1,18 +1,24 @@
 body {
   background-color: #fff;
   color: #333;
-  background: url('/images/paper_bg.png') repeat center;
+  background: url('/images/bg.png') repeat center;
+  text-align: center;
 }
 
 div.dashboard {
-  min-height: 100px;
-  background: url('/images/bubbles.png') no-repeat top;
-  margin-top: -50px;
+  min-height: 800px;
+  background: url('/images/dashboard2.png') no-repeat top;
+  margin-top: -200px;
   }
 
 div.rainbow {
-  background: url('/images/rainbow.png') no-repeat center;
-  visibility: hidden;
+  background: url('/images/rainbow2.png') no-repeat top;
+  visibility: visible;
+  margin: auto;
+  overflow: hidden;
+  min-height: 200px;
+  position: relative;
+  /*margin-top: -50px;*/
 }
 
 div.figures {
@@ -23,8 +29,14 @@ div.figures {
 
 
 div.figure1 {
-  background: url('/images/small_hexa_outline.png') no-repeat bottom;
+  background: url('/images/large_hexa.png') no-repeat;
   visibility: hidden;
+  min-height: 300px;
+  min-width: 300px;
+  position-left: 600px;
+  position-top: 700px;
+  position: absolute;
+
   }
 
 div.figure2 {
@@ -45,20 +57,28 @@ body, p, ol, ul, td {
 
 h1 {
   /*color: #0091CE;*/
-  /*color: #000000;*/
-   color: #c7cfb6;
+  color: #000000;
+ /* color:#CC9966;*/
+  /*color: #c7cfb6;*/
   font-size: 32px;
-  margin-top: 245px;
+ /* margin-top: 245px;*/
   text-align: center;
   visibility: visible;
+  overflow: hidden;
+  position: relative;
 }
 
 div.info {
-  font-size: 18px;
-  margin-top: 10px;
-  color: #FFFFFF;
+   color: #FFFFFF;
+   font-size: 18px;
+   margin-top: -15px;
+}
+div.main_content {
+
   text-align: center;
-    visibility: visible;
+  visibility: visible;
+  overflow: hidden;
+  position: relative;
 }
 
 div.day_counter {
@@ -68,11 +88,10 @@ div.day_counter {
 }
 
 div.main {
-  margin-left: auto;
-  margin-top: -150px;
-  width: 800px;
-    visibility: visible;
-
+  visibility: visible;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
 div.gratitudes {
@@ -80,6 +99,9 @@ div.gratitudes {
   /*color: #B3B3B3;*/
   /*color: #764511;*/
   text-align: left;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
 }
 
 div.days {

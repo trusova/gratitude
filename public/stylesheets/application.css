@@ -1,9 +1,11 @@
 ul.hmenu {
-  list-style: none;	
-  margin: 0 0 2em;
+  list-style: none;
+  text-align: center;
   padding: 0px;
+  margin-top: 0px;
 }
 
 ul.hmenu li {
-  display: inline;  
+  display: inline;
+  text-align: center;
 }
