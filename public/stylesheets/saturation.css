@@ -1,0 +1,133 @@
+body {
+  background-color: #fff;
+  color: #333;
+  background: url('/images/bg.png') repeat;
+}
+
+div.dashboard {
+  min-height: 800px;
+  background: url('/images/dashboard2.png') no-repeat center;
+}
+
+div.rainbow {
+  background: url('/images/rainbow.png') no-repeat center;
+  visibility: hidden;
+}
+
+div.figures {
+  background: url('/images/figures.png') no-repeat top;
+  visibility: hidden;
+  min-height: 500px;
+}
+
+body, p, ol, ul, td {
+  font-family: gill sans;
+  font-size:   32px;
+}
+
+h1 {
+  color: #0091CE;
+  font-size: 32px;
+  margin-top: 60px;
+  text-align: center;
+  visibility: visible;
+}
+
+div.info {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #FFFFFF;
+  text-align: center;
+    visibility: visible;
+}
+
+div.day_counter {
+  padding-top: 35px;
+  padding-left: 18px;
+  font-size: 18px;
+}
+
+div.main {
+  margin-left: auto;
+  margin-top: 50px;
+  width: 800px;
+    visibility: visible;
+
+}
+
+div.gratitudes {
+  color: #B3B3B3;
+  text-align: left;
+}
+
+div.days {
+  margin-left: -120px;
+  margin-top: -130px;
+  height:100px;
+  color: #B3B3B3;
+  text-indent: 10px;
+  background: url('/images/circle.jpg') no-repeat;
+  visibility: visible;
+}
+
+div.line {
+  background: url('/images/dotted_line.jpg') no-repeat;
+  margin-top: 40px;
+  margin-left: 47px;
+  height: 50px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #FFFFFF; }
+a:visited { color: #FFFFFF; }
+a:hover { color: #fff; background-color:#000; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+  margin-top: 200px;
+}
+
+form input[type="text"] {
+  font-size: 18px;
+  width: 420px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
