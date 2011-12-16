@@ -8,18 +8,16 @@ body {
 div.dashboard {
   min-height: 800px;
   background: url('/images/dashboard4.png') no-repeat top;
-  margin-top: -200px;
+  margin-top: -177px;
   }
 
 div.rainbow {
-  background: url('/images/rainbow1.png') no-repeat top;
+  background: url('/images/rainbow_combo.png') no-repeat 0 -175px;
   visibility: visible;
-  margin: auto;
   overflow: hidden;
-  min-height: 200px;
+  min-height: 166px;
   position: relative;
-  margin-left: -30px;
-  /*margin-top: -50px;*/
+  margin-left: 37%;
 }
 
 div.figures {
