@@ -48,8 +48,8 @@ QuestionApp::Application.configure do
 config.action_mailer.smtp_settings = {
   :address => 'smtp.gmail.com',
   :port => 587,
-  :user_name => 'trusova@gmail.com',
-  :password => 'Iamthebest#1',
+  :user_name => 'your.gratitudes@gmail.com',
+  :password => 'oltr1025',
   :authentication => 'login',
   :enable_starttls_auto => true
 }
