@@ -13,7 +13,7 @@ class BlessingsController < ApplicationController
   # GET /blessings/1
   # GET /blessings/1.xml
   def show
-    @blessing = Blessing.find(params[:id])
+    @blessing = Blessing.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,12 +24,15 @@ class BlessingsController < ApplicationController
   # GET /blessings/new
   # GET /blessings/new.xml
   def new
+    if user_signed_in?
     @blessing = Blessing.new
-    @blessings = Blessing.all
+    @blessings = Blessing.find(:all, :conditions => ["user_id = ?", current_user.id])
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @blessing }
     end
+    end
+    
   end
 
   # GET /blessings/1/edit
@@ -40,7 +43,11 @@ class BlessingsController < ApplicationController
   # POST /blessings
   # POST /blessings.xml
   def create
-    @blessing = Blessing.new(params[:blessing])
+    
+    #omniauth = request.env['omniauth.auth']
+    
+    if user_signed_in?
+    @blessing = Blessing.new(params[:blessing].merge(:user => current_user))
 
     respond_to do |format|
       if @blessing.save
@@ -51,6 +58,11 @@ class BlessingsController < ApplicationController
         format.xml  { render :xml => @blessing.errors, :status => :unprocessable_entity }
       end
     end
+    else
+     redirect_to root_path
+    end
+    
+    
   end
 
   # PUT /blessings/1

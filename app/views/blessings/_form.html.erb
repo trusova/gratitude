@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <%= form_for(@blessing) do |f| %>
   <% if @blessing.errors.any? %>
     <div id="error_explanation">
@@ -10,7 +11,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field" >
     <div>What are you grateful for today?</div>
     <%= f.text_field :answer %>
@@ -19,4 +19,5 @@
     <%= f.submit %>
   </div>-->
 
+<% end %>
 <% end %>
