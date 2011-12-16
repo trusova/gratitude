@@ -4,12 +4,15 @@
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', new_user_session_path)  %>  
+  <%= link_to('Login', new_user_session_path)  %>
+  </li>
+  <li>
+<%= link_to "Connect With Facebook", "/auth/facebook" %>
   </li>
 <li>
   <% if current_user %>
    <%= current_user.email %>
-  <% else %>
-  <% end %>
+   <% end %>
 </li>
+
 <% end %>

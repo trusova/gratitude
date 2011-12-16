@@ -1,23 +1,24 @@
 body {
   background-color: #fff;
   color: #333;
-  background: url('/images/bg.png') repeat center;
+  background: url('/images/brown_bg_pyramid.png') repeat center;
   text-align: center;
 }
 
 div.dashboard {
   min-height: 800px;
-  background: url('/images/dashboard2.png') no-repeat top;
+  background: url('/images/dashboard4.png') no-repeat top;
   margin-top: -200px;
   }
 
 div.rainbow {
-  background: url('/images/rainbow2.png') no-repeat top;
+  background: url('/images/rainbow1.png') no-repeat top;
   visibility: visible;
   margin: auto;
   overflow: hidden;
   min-height: 200px;
   position: relative;
+  margin-left: -30px;
   /*margin-top: -50px;*/
 }
 
