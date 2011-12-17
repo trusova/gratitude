@@ -12,7 +12,7 @@ div.dashboard {
   }
 
 div.rainbow {
-  background: url('/images/rainbow_combo.png') no-repeat 0 -175px;
+  background: url('/images/rainbow_combo2.png') no-repeat 0 -175px;
   visibility: visible;
   overflow: hidden;
   min-height: 166px;
@@ -128,7 +128,10 @@ pre {
 
 a { color: #FFFFFF; }
 a:visited { color: #FFFFFF; }
-a:hover { color: #fff; background-color:#000; }
+a:hover { color: #fff; 
+/*background-color:#000;*/
+}
+
 
 div.field, div.actions {
   margin-bottom: 10px;

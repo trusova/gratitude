@@ -82,11 +82,11 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
-
+/*
 a { color: #FFFFFF; }
 a:visited { color: #FFFFFF; }
 a:hover { color: #fff; background-color:#000; }
-
+*/
 div.field, div.actions {
   margin-bottom: 10px;
   margin-top: 200px;

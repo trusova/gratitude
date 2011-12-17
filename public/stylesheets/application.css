@@ -5,6 +5,13 @@ ul.hmenu {
   margin-top: 0px;
 }
 
+ul.gmenu {
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  margin-top: 0px;
+}
+
 ul.hmenu li {
   display: inline;
   text-align: center;
