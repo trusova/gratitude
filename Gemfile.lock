@@ -38,6 +38,7 @@ GEM
       mime-types
       xml-simple
       xml-simple
+    babosa (0.2.2)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capybara (0.4.1.2)
@@ -79,6 +80,8 @@ GEM
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
     ffi (1.0.11)
+    friendly_id (3.2.1)
+      babosa (~> 0.2.1)
     heroku (2.16.2)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -221,6 +224,7 @@ DEPENDENCIES
   devise (= 1.2.1)
   engineyard (= 1.3.17)
   faker (= 0.9.5)
+  friendly_id (= 3.2.1)
   heroku
   jasmine
   jquery-rails

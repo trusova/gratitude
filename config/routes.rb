@@ -1,4 +1,10 @@
 QuestionApp::Application.routes.draw do
+  get "sites/show"
+
+  get "users/index"
+
+  get "users/show"
+
 #  get "sessions/new"
 
 #  get "sessions/create"
@@ -12,7 +18,14 @@ get '/logout', :to => 'sessions#destroy'
 
   devise_for :users
 
-  root :to => "blessings#new"
+ #resources :users, :only => [:index, :show] do
+  # resources :subdomains, :shallow => true
+ #end
+ #match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
+
+ #root :to => "home#index"
+match 'users/:id' => 'blessings#new'
+root :to => "blessings#new"
 
   resources :blessings
 

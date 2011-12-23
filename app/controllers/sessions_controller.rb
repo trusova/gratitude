@@ -8,6 +8,9 @@ class SessionsController < ApplicationController
   @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
   if @authorization
     sign_in_and_redirect(:user, @authorization.user)
+
+    Notifier.daily_email(@authorization.user.email).deliver
+
     #render :text => "Welcome back #{@authorization.user.email}! You have already signed up."
   else
    # user = User.new :email => auth_hash["user_info"]["email"]
