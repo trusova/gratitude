@@ -9,5 +9,5 @@ def daily_email(user_email)
                 format.text
                 format.html
     end
-  
+end  
 end
