@@ -1,14 +1,14 @@
 QuestionApp::Application.routes.draw do
 
-  get "users/index"
+  #get "users/index"
 
-  get "users/show"
+  #get "users/show"
 
-#  get "sessions/new"
+  #get "sessions/new"
 
-#  get "sessions/create"
+  #get "sessions/create"
 
-#  get "sessions/failure"
+  #get "sessions/failure"
 
 get   '/login', :to => 'sessions#new', :as => :login
 match '/auth/:provider/callback', :to => 'sessions#create'
@@ -23,7 +23,7 @@ get '/logout', :to => 'sessions#destroy'
  #match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
 
  #root :to => "home#index"
-match 'users/:name' => 'blessings#index'
+ match 'users/:name' => 'blessings#index'
 #match ':name' => 'blessings#index'
 root :to => "blessings#new"
 
