@@ -2,18 +2,26 @@ class BlessingsController < ApplicationController
   # GET /blessings
   # GET /blessings.xml
   def index
-    @blessings = Blessing.all
+    @blessing = Blessing.new
+    @external_user = User.find_by_cached_slug(params[:name])
+    
+    if @external_user
+    @blessings = Blessing.find(:all, :conditions => ["user_id = ?", @external_user.id])
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @blessings }
+      format.xml  { render :xml => @blessing }
     end
+    else
+     redirect_to root_path
+    end
+     
   end
 
   # GET /blessings/1
   # GET /blessings/1.xml
   def show
-    @blessing = Blessing.all
+    #@blessing = Blessing.all
 
     respond_to do |format|
       format.html # show.html.erb

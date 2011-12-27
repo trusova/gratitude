@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     #render :text => "Welcome back #{@authorization.user.email}! You have already signed up."
   else
    # user = User.new :email => auth_hash["user_info"]["email"]
-    user = User.new(:email => auth_hash["user_info"]["email"], :password => SecureRandom.hex(10))
+    user = User.new(:name => auth_hash["user_info"]["name"], :email => auth_hash["user_info"]["email"], :password => SecureRandom.hex(10))
     user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
     user.save
       @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])

@@ -1,23 +1,85 @@
-<h1>30 days of gratitude</h1>
 
-<table>
-  <tr>
-    <th>What are you grateful for today?</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+   
+    <a name="fb_share" type="icon" share_url="http://gratefully.heroku.com"/>
+    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+        type="text/javascript">
+</script>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
+<div class="info">
+<a href="http://chass.ucr.edu/faculty_book/lyubomirsky/" target="_blank">Research</a>
+shows that recording 3 gratitudes a day for 30 days can rewire your brain and make you happier...
+<!--http://www.cfidsselfhelp.org/library/counting-your-blessings-how-gratitude-improves-your-health-->
+    </div>
+ <div class="rainbow" id="rainbow"></div>
+<div class="dashboard">
+   <div class="figure1" id="figure1">
+   </div>
+    <!--<div class="figure2" id="figure2">
+      <div class="figure3" id="figure3">-->
+         
+            
+  <div class="main_content">
+    
+<!--<h1>30 days of gratitude</h1>-->
+
+    
+<%= render 'form' %>
+
+  <ul id="gratitude" class="gmenu">
+    
+<% counter = 0 %>
+<%   days = 0 %>
 
 <% @blessings.each do |blessing| %>
-  <tr>
-    <td><%= blessing.answer %></td>
-    <td><%= link_to 'Show', blessing %></td>
+
+  <% counter += 1 %>
+  <% days += 1 %>
+
+  <li><%= blessing.answer %></li>
+  
+
+  <% if counter == 1 %>
+  <script type="text/javascript">
+      //document.getElementById('figure3').style.visibility = 'visible';
+      document.getElementById('rainbow').style.backgroundPosition = '0 -175px';
+   </script>
+  <% end %>
+  
+    <% if counter == 2 %>
+  <script type="text/javascript">
+      //document.getElementById('figure2').style.visibility = 'visible';
+   </script>
+  <% end %>
+
+  <% if counter == 3 %>
+  </ul>
+   <script type="text/javascript">
+      document.getElementById('figure1').style.visibility = 'visible';
+      document.getElementById('rainbow').style.backgroundPosition = '0 -175px';
+   </script>
+ <!-- <div class="days" id="days">
+    <div class="day_counter">Day <%=days/3 %></div>
+  <div class="line"></div>
+  </div>-->
+  <ul id="gratitude" class="gmenu">
+    <% counter = 0 %>
+   
+     <script type="text/javascript">
+      document.getElementById('rainbow').style.backgroundPosition = '0 0';
+   </script>
+    <% end %>
+    <!--<td><%= link_to 'Show', blessing %></td>
     <td><%= link_to 'Edit', edit_blessing_path(blessing) %></td>
-    <td><%= link_to 'Destroy', blessing, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <td><%= link_to 'Destroy', blessing, :confirm => 'Are you sure?', :method => :delete %></td>-->
 <% end %>
-</table>
+  </ul>
+<!--</div>
+  </div>
+  </div>-->
+      </div>
+    </div>
 
-<br />
-
-<%= link_to 'New Gratitude', new_blessing_path %>
+<!--<%= link_to 'Back', blessings_path %>-->

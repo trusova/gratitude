@@ -1,5 +1,4 @@
 QuestionApp::Application.routes.draw do
-  get "sites/show"
 
   get "users/index"
 
@@ -24,7 +23,8 @@ get '/logout', :to => 'sessions#destroy'
  #match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
 
  #root :to => "home#index"
-match 'users/:id' => 'blessings#new'
+match 'users/:name' => 'blessings#index'
+#match ':name' => 'blessings#index'
 root :to => "blessings#new"
 
   resources :blessings
