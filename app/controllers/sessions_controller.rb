@@ -20,9 +20,9 @@ class SessionsController < ApplicationController
       @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
 
     #render :text => "Hi #{auth_hash["user_info"]["name"]}! You've signed up."
-    #render :text => auth_hash.inspect
+    render :text => auth_hash.inspect
 
-    sign_in_and_redirect(:user, @authorization.user)
+    #sign_in_and_redirect(:user, @authorization.user)
     
     return
   end
