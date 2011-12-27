@@ -9,18 +9,16 @@ class SessionsController < ApplicationController
   if @authorization
     sign_in_and_redirect(:user, @authorization.user)
 
-    Notifier.daily_email(@authorization.user.email).deliver
-
     #render :text => "Welcome back #{@authorization.user.email}! You have already signed up."
   else
    # user = User.new :email => auth_hash["user_info"]["email"]
-    user = User.new(:name => auth_hash["user_info"]["name"], :email => auth_hash["user_info"]["email"], :password => SecureRandom.hex(10))
+    user = User.new(:name => auth_hash["user_info"]["name"], :email => auth_hash["user_info"]["email"], :password => SecureRandom.hex(10), :cached_slug => auth_hash["user_info"]["username"])
     user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
     user.save
-      @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
+    @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
 
     #render :text => "Hi #{auth_hash["user_info"]["name"]}! You've signed up."
-    render :text => auth_hash.inspect
+    #render :text => auth_hash.inspect
 
     #sign_in_and_redirect(:user, @authorization.user)
     

@@ -33,6 +33,8 @@ class BlessingsController < ApplicationController
   # GET /blessings/new.xml
   def new
     if user_signed_in?
+  Notifier.daily_email(current_user.email).deliver
+
     @blessing = Blessing.new
     @blessings = Blessing.find(:all, :conditions => ["user_id = ?", current_user.id])
     respond_to do |format|
