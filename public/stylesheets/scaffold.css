@@ -11,6 +11,12 @@ div.dashboard {
   margin-top: -180px;
   }
   
+  
+div.account_dashboard {
+  min-height: 800px;
+  background: url('/images/blue_hexa.png') no-repeat top;
+  }
+  
 div.question {
   background: url('/images/question.png') no-repeat center;
   min-height: 66px;
