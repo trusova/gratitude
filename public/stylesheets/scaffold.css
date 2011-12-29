@@ -1,14 +1,12 @@
 body {
-  background-color: #fff;
-  color: #333;
-  background: url('/images/brown_bg_pyramid.png') repeat;
+  background: url('/images/bg_BEST.png') repeat-x top #cabfb1;
   text-align: center;
 }
 
 div.dashboard {
   min-height: 800px;
   background: url('/images/new_dash.png') no-repeat top;
-  margin-top: -180px;
+  margin-top: -179px;
   }
   
   
@@ -30,7 +28,7 @@ div.rainbow {
   min-height: 166px;
   width: 330px;
   margin: auto;
-  margin-top: 10px;
+  margin-top: -56px;
 }
 
 div.figures {
@@ -57,8 +55,7 @@ div.figure3 {
 }
 
 body, p, ol, ul, td {
-  font-family: Rockwell, "Courier New", Courier, Georgia,
-                 Times, "Times New Roman", serif;
+ font-family: 'Cabin Sketch', sans-serif;
   font-size:   30px;
   color: #292b2f;
 }
@@ -68,7 +65,7 @@ h1 {
   color: #000000;
  /* color:#CC9966;*/
   /*color: #c7cfb6;*/
-  font-size: 32px;
+  font-size: 30px;
  /* margin-top: 245px;*/
   text-align: center;
   visibility: visible;
@@ -104,7 +101,7 @@ div.gratitudes {
   overflow: hidden;
   position: relative;
   margin: auto;
-  font-family: 'Cabin Condensed', sans-serif;
+  font-family: 'Cabin Sketch', sans-serif;
 }
 
 div.days {
@@ -146,7 +143,7 @@ a:hover { color: #fff;
 
 div.field, div.actions {
   margin-bottom: 10px;
-  margin-top: 200px;
+  margin-top: 230px;
 }
 
 form input[type="text"] {
@@ -176,12 +173,12 @@ form input[type="text"] {
   text-align: left;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
-  font-size: 12px;
+  font-size: 14px;
   margin: -7px;
   margin-bottom: 0px;
 }
 
 #error_explanation ul li {
-  font-size: 12px;
+  font-size: 14px;
   list-style: square;
 }

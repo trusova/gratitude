@@ -1,7 +1,8 @@
 ul.hmenu {
   list-style: none;
-  text-align: center;
+  text-align: right;
   padding: 0px;
+  padding-right: 10px;
   margin-top: 0px;
 }
 
@@ -10,11 +11,12 @@ ul.gmenu {
   text-align: center;
   padding: 0px;
   margin-top: 0px;
-  font-family: 'Cabin Condensed', sans-serif;
+  font-family: 'Cabin Sketch', sans-serif;
   color: grey;
 }
 
 ul.hmenu li {
   display: inline;
   text-align: center;
+  font-size: 18px;
 }
