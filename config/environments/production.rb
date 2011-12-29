@@ -48,8 +48,8 @@ QuestionApp::Application.configure do
 config.action_mailer.smtp_settings = {
   :address => 'smtp.gmail.com',
   :port => 587,
-  :user_name => 'your.gratitudes@gmail.com',
-  :password => 'oltr1025',
+  :user_name => 'info@gratitude.is',
+  :password => 'toolsforhappy',
   :authentication => 'login',
   :enable_starttls_auto => true
 }

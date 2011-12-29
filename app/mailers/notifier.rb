@@ -1,10 +1,10 @@
 class Notifier < ActionMailer::Base
-  default :from => "your.gratitudes@gmail.com"
+  default :from => "reminder@gratitude.is"
 
 def daily_email(user_email)
 
     mail(   :to      => user_email,
-            :from    => "your.gratitudes@gmail.com",
+            :from    => "reminder@gratitude.is",
             :subject => "What are you grateful for today?") do |format|
                 format.text
                 format.html
