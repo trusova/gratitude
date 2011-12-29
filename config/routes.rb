@@ -24,6 +24,8 @@ get '/logout', :to => 'sessions#destroy'
 
  #root :to => "home#index"
  match 'users/:name' => 'blessings#index'
+ match 'sharedby/:name' => 'blessings#index'
+
 #match ':name' => 'blessings#index'
 root :to => "blessings#new"
 
