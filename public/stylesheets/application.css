@@ -10,6 +10,8 @@ ul.gmenu {
   text-align: center;
   padding: 0px;
   margin-top: 0px;
+  font-family: 'Cabin Condensed', sans-serif;
+  color: grey;
 }
 
 ul.hmenu li {

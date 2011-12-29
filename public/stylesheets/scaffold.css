@@ -104,6 +104,7 @@ div.gratitudes {
   overflow: hidden;
   position: relative;
   margin: auto;
+  font-family: 'Cabin Condensed', sans-serif;
 }
 
 div.days {
