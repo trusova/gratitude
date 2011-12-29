@@ -1,23 +1,30 @@
 body {
   background-color: #fff;
   color: #333;
-  background: url('/images/brown_bg_pyramid.png') repeat center;
+  background: url('/images/brown_bg_pyramid.png') repeat;
   text-align: center;
 }
 
 div.dashboard {
   min-height: 800px;
-  background: url('/images/dashboard4.png') no-repeat top;
-  margin-top: -177px;
+  background: url('/images/new_dash.png') no-repeat top;
+  margin-top: -180px;
   }
+  
+div.question {
+  background: url('/images/question.png') no-repeat center;
+  min-height: 66px;
+}
 
 div.rainbow {
   background: url('/images/rainbow_combo2.png') no-repeat 0 -175px;
   visibility: visible;
   overflow: hidden;
-  min-height: 166px;
   position: relative;
-  margin-left: 37%;
+  min-height: 166px;
+  width: 330px;
+  margin: auto;
+  margin-top: 10px;
 }
 
 div.figures {
@@ -28,20 +35,14 @@ div.figures {
 
 
 div.figure1 {
-  background: url('/images/large_hexa.png') no-repeat;
+  background: url('/images/large_hexa_outline.png') no-repeat;
   visibility: hidden;
-  min-height: 300px;
-  min-width: 300px;
-  position-left: 600px;
-  position-top: 700px;
-  position: absolute;
 
   }
 
 div.figure2 {
   background: url('/images/medium_hexa_outline.png') no-repeat bottom;
   visibility: hidden;
-  margin-right: 0px;
 }
 
 div.figure3 {
@@ -50,8 +51,10 @@ div.figure3 {
 }
 
 body, p, ol, ul, td {
-  font-family: gill sans;
-  font-size:   32px;
+  font-family: Rockwell, "Courier New", Courier, Georgia,
+                 Times, "Times New Roman", serif;
+  font-size:   30px;
+  color: #292b2f;
 }
 
 h1 {
@@ -80,12 +83,6 @@ div.main_content {
   position: relative;
 }
 
-div.day_counter {
-  padding-top: 35px;
-  padding-left: 18px;
-  font-size: 18px;
-}
-
 div.main {
   visibility: visible;
   text-align: center;
@@ -104,13 +101,20 @@ div.gratitudes {
 }
 
 div.days {
-  margin-left: -120px;
-  margin-top: -130px;
-  height:100px;
+  margin:auto;
+  width: 100px;
+  padding-right: 200px;
+  margin-top: -110px;
   color: #B3B3B3;
-  text-indent: 10px;
-  background: url('/images/circle.jpg') no-repeat;
+  /*background: url('/images/large_hexa_outline.png') no-repeat;*/
   visibility: visible;
+  font-size: 18px;
+}
+
+div.day_counter {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
 }
 
 div.line {
@@ -159,7 +163,6 @@ form input[type="text"] {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
 }
 
 #error_explanation h2 {
@@ -169,8 +172,6 @@ form input[type="text"] {
   font-size: 12px;
   margin: -7px;
   margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
 }
 
 #error_explanation ul li {
