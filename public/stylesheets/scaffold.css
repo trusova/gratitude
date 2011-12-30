@@ -1,5 +1,5 @@
 body {
-  background: url('/images/bg_BEST.png') repeat-x top #cabfb1;
+  background: url('/images/bg_half.png') repeat top #cabfb1;
   text-align: center;
 }
 
@@ -28,7 +28,7 @@ div.rainbow {
   min-height: 166px;
   width: 330px;
   margin: auto;
-  margin-top: -56px;
+  /*margin-top: -56px;*/
 }
 
 div.figures {

@@ -36,7 +36,8 @@ class BlessingsController < ApplicationController
   #Notifier.daily_email(current_user.email).deliver
 
     @blessing = Blessing.new
-    @blessings = Blessing.find(:all, :conditions => ["user_id = ?", current_user.id])
+    @blessings = Blessing.find(:all, :order => 'created_at DESC', :conditions => ["user_id = ?", current_user.id])
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @blessing }

@@ -4,6 +4,7 @@ ul.hmenu {
   padding: 0px;
   padding-right: 10px;
   margin-top: 0px;
+  visibility: visible;
 }
 
 ul.gmenu {
@@ -13,6 +14,7 @@ ul.gmenu {
   margin-top: 0px;
   font-family: 'Cabin Sketch', sans-serif;
   color: grey;
+  font-size: 26px;
 }
 
 ul.hmenu li {
