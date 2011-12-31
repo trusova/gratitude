@@ -5,7 +5,8 @@ body {
 
 div.dashboard {
   min-height: 800px;
-  background: url('/images/new_dash_rainbow2.png') no-repeat top;
+  background: url('/images/new_dash.png') no-repeat top;
+  margin-top: -179px;
   }
   
 div.share {
@@ -17,49 +18,12 @@ div.share {
 }
 
 div.account_dashboard {
-  min-height: 450px;
-  width: 455px;
-  padding: 5px;
-  padding-left: 40px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: auto;
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  /*background: url('/images/light_slice.png') repeat-y top;*/
+  min-height: 800px;
+  background: url('/images/blue_hexa.png') no-repeat top;
   }
-  
-  div.login_dashboard {
-  min-height: 300px;
-  width: 350px;
-  padding-bottom: 20px;
-  padding-left: 45px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: auto;
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  }
-  
-  div.signup_dashboard {
-  min-height: 500px;
-  width: 350px;
-  padding-bottom: 25px;
-  padding-top: 5px;
-  padding-left: 45px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: auto;
-  margin-top: 40px;
-  position: relative;
-  text-align: left;
-  /*background: url('/images/light_slice.png') repeat-y top;*/
-  }
-  
   
 div.question {
-  background: url('/images/question_final.png') no-repeat center;
+  background: url('/images/question.png') no-repeat center;
   min-height: 66px;
 }
 
@@ -122,6 +86,7 @@ div.info {
    margin-top: -15px;
 }
 div.main_content {
+
   text-align: center;
   visibility: visible;
   overflow: hidden;
@@ -152,7 +117,7 @@ div.days {
   padding-right: 200px;
   margin-top: -110px;
   color: #B3B3B3;
-  background: url('/images/light_hex.png') no-repeat;
+  /*background: url('/images/large_hexa_outline.png') no-repeat;*/
   visibility: visible;
   font-size: 18px;
 }
@@ -160,7 +125,7 @@ div.days {
 div.day_counter {
   text-align: center;
   padding: 20px;
-  color: #c1a986;
+  color: #fff;
 }
 
 div.line {
@@ -185,7 +150,7 @@ a:hover { color: #fff;
 
 div.field, div.actions {
   margin-bottom: 10px;
-  margin-top: 130px;
+  margin-top: 230px;
 }
 
 form input[type="text"] {
@@ -230,7 +195,7 @@ form input[type="email"]{
 }
 
 #error_explanation h2 {
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
   font-size: 14px;

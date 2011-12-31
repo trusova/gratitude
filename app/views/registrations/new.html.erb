@@ -1,7 +1,8 @@
+<div class="signup_dashboard">
 <h2>Sign up</h2>
 
 <a href="/auth/facebook"><div class="fb-login-button" size="large">Login with Facebook</div></a>
-  <p style="color: #fff;">-or-</p>
+  <p>-or-</p>
   
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -23,3 +24,4 @@
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+</div>

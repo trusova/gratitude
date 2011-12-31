@@ -1,5 +1,7 @@
+<div class="login_dashboard">
 <h2>Sign in</h2>
-
+<a href="/auth/facebook"><div class="fb-login-button" size="large">Login with Facebook</div></a>
+  <p>-or-</p>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <p><%= f.label :email %><br />
   <%= f.email_field :email %></p>
@@ -12,10 +14,8 @@
   <% end -%>
 
   <p><%= f.submit "Sign in" %></p>
-  <p>-or-</p>
-  <a href="/auth/facebook"><div class="fb-login-button">Login with Facebook</div></a>
 <% end %>
-
+</div>
 
 
 

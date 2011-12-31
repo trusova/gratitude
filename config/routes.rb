@@ -15,7 +15,7 @@ match '/auth/:provider/callback', :to => 'sessions#create'
 match '/auth/failure', :to => 'sessions#failure'
 get '/logout', :to => 'sessions#destroy'
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
  #resources :users, :only => [:index, :show] do
   # resources :subdomains, :shallow => true

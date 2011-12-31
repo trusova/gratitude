@@ -2,7 +2,7 @@ ul.hmenu {
   list-style: none;
   text-align: right;
   padding: 0px;
-  padding-right: 10px;
+  padding-right: 15px;
   margin-top: 0px;
   visibility: visible;
 }
@@ -13,12 +13,30 @@ ul.gmenu {
   padding: 0px;
   margin-top: 0px;
   font-family: 'Cabin Sketch', sans-serif;
-  color: grey;
-  font-size: 26px;
+  color: #666666;
+  font-size: 20px;
+  background: rgba(203, 226, 219, 0.5);
+  width: 420px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  
 }
 
 ul.hmenu li {
   display: inline;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
+  font-family: 'Sketch Block', sans-serif;
+}
+
+ul.hmenu a {
+  text-decoration: none;
+  color: #a49d96;
+}
+
+div.nav {
+background-color: #ede9e4;
+height: 25px;
+margin: -10px;
 }
