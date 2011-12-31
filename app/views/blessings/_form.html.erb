@@ -1,18 +1,16 @@
 <% if user_signed_in? %>
 <%= form_for(@blessing) do |f| %>
   <% if @blessing.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blessing.errors.count, "error") %> prohibited this gratitude from being saved:</h2>
-
+    <!--<div id="error_explanation">
       <ul>
       <% @blessing.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
+    </div>-->   
   <% end %>
   <div class="field" >
-    <div class="question">&nbsp;</div>
+    <div class="question"></div>
     <%= f.text_field :answer %>
   </div>
   <!--<div class="actions">
