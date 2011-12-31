@@ -4,7 +4,7 @@
   <title>30 days of gratitude</title>
   <link rel="shortcut icon"
  href="http://gratitude.is/favicon.ico" />
-  <link href='http://fonts.googleapis.com/css?family=Cabin+Condensed' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch|Corben' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -22,15 +22,12 @@
 
 <div class="nav">
   <ul class="hmenu">
-    <li style="float: left; padding-left: 15px; padding-top: 3px;"><img src="/images/logo_small.png"></li>
-    <li><a href="/">Home</a></li>
+    <li class="logo"><a href="/"><img src="/images/logo_small.png"></a></li>
     <%= render 'devise/menu/registration_items' %>
     <%= render 'devise/menu/login_items' %>
   </ul>
 </div>
-<!--  <p style="color: green"><%= notice %></p>
-  <p style="color: red"><%= alert %></p>
--->
+
 <%= yield %>
 
 </body>

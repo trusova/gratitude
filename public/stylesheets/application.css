@@ -12,7 +12,7 @@ ul.gmenu {
   text-align: center;
   padding: 0px;
   margin-top: 0px;
-  font-family: 'Cabin Sketch', sans-serif;
+  font-family: 'Cabin Sketch', cursive;
   color: #666666;
   font-size: 20px;
   background: rgba(203, 226, 219, 0.5);
@@ -27,16 +27,24 @@ ul.hmenu li {
   display: inline;
   text-align: center;
   font-size: 14px;
-  font-family: 'Sketch Block', sans-serif;
+  font-family: 'Corben', cursive;
+  padding-top: 15px;
+}
+
+ul.hmenu li.logo {
+ float: left;
+ padding-left: 15px;
+ padding-top: 5px;
 }
 
 ul.hmenu a {
   text-decoration: none;
   color: #a49d96;
+  padding-right: 15px;
 }
 
 div.nav {
 background-color: #ede9e4;
-height: 25px;
+height: 30px;
 margin: -10px;
 }

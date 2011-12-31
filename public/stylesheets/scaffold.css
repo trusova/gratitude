@@ -9,54 +9,52 @@ div.dashboard {
   }
   
 div.share {
-  width: 500px;
+  width: 420px;
   margin: auto;
   position: relative;
   text-align:right;
   padding-top: 25px;
+  padding-right: 0px;
+  float: right; 
 }
 
-div.account_dashboard {
+div.account {
+  background: rgba(255, 255, 255, 0.5);
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+  text-align: left; 
+}
+
+div.account#dashboard {
   min-height: 450px;
   width: 455px;
   padding: 5px;
   padding-left: 40px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: auto;
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  /*background: url('/images/light_slice.png') repeat-y top;*/
   }
   
-  div.login_dashboard {
+  div.account#login {
   min-height: 300px;
   width: 350px;
   padding-bottom: 20px;
   padding-left: 45px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: auto;
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
   }
   
-  div.signup_dashboard {
+  div.account#forgot {
+  min-height: 300px;
+  width: 350px;
+  padding-bottom: 20px;
+  padding-left: 45px;
+  }
+  
+  div.account#signup {
   min-height: 500px;
   width: 350px;
   padding-bottom: 25px;
   padding-top: 5px;
   padding-left: 45px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: auto;
-  margin-top: 40px;
-  position: relative;
-  text-align: left;
-  /*background: url('/images/light_slice.png') repeat-y top;*/
   }
-  
   
 div.question {
   background: url('/images/question_final.png') no-repeat center;
@@ -71,7 +69,6 @@ div.rainbow {
   min-height: 166px;
   width: 330px;
   margin: auto;
-  /*margin-top: -56px;*/
 }
 
 div.figures {
@@ -98,18 +95,14 @@ div.figure3 {
 }
 
 body, p, ol, ul, td {
- font-family: 'Cabin Sketch', sans-serif;
+ font-family: 'Corben', cursive;
   font-size:   18px;
   color: #292b2f;
 }
 
 h1 {
-  /*color: #0091CE;*/
   color: #000000;
- /* color:#CC9966;*/
-  /*color: #c7cfb6;*/
   font-size: 30px;
- /* margin-top: 245px;*/
   text-align: center;
   visibility: visible;
   overflow: hidden;
@@ -126,41 +119,46 @@ div.main_content {
   visibility: visible;
   overflow: hidden;
   position: relative;
+  margin: auto;
 }
 
-div.main {
-  visibility: visible;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
+div.light_wide_block {
+    background: rgba(203, 226, 219, 0.5);
+    min-height: 100px;
+    margin: 0px;
+    padding: 0px;
 }
 
 div.gratitudes {
-  /*color: #000000;*/
-  /*color: #B3B3B3;*/
-  /*color: #764511;*/
   text-align: left;
   overflow: hidden;
   position: relative;
   margin: auto;
-  font-family: 'Cabin Sketch', sans-serif;
+  font-family: 'Cabin Sketch', cursive;
+  float: right;
+     display: inline-block;  
+   vertical-align: middle; 
 }
 
 div.days {
   margin:auto;
-  width: 100px;
-  padding-right: 200px;
-  margin-top: -110px;
+  width: 65px;
+  height: 70px;
+  float: left;
   color: #B3B3B3;
   background: url('/images/light_hex.png') no-repeat;
   visibility: visible;
   font-size: 18px;
+  position: relative;
+  overflow: hidden;
 }
 
 div.day_counter {
   text-align: center;
-  padding: 20px;
   color: #c1a986;
+  position: relative;
+  overflow: hidden;
+  padding-top: 15px;
 }
 
 div.line {
@@ -179,7 +177,6 @@ pre {
 a { color: #FFFFFF; }
 a:visited { color: #FFFFFF; }
 a:hover { color: #fff; 
-/*background-color:#000;*/
 }
 
 
