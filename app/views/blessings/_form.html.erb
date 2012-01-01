@@ -18,4 +18,31 @@
   </div>-->
 
 <% end %>
+<% else %>
+<form onsubmit="/users/sign_in">
+<div class="field">
+  <div class="question"></div>
+  <div class="info"></div>
+  <input id="blessing_answer" name="blessing[answer]" size="30" type="text" />
+</div>
+<div>
+<ul class="landing_menu">
+  <li>Persimmons from the farmer's market</li>
+  <li>My family</li>
+  <li>Awesome red shoes from Fluwog</li>
+</ul>
+</div>
+<br/>
+<div style="margin: 0 auto; width: 200px;">
+<div style="float:left; width: 100px;">
+<a href="/users/sign_in"><img src="/images/login.png" />
+</div>
+<div>
+<a href="/auth/facebook"><div class="fb-login-button" size="large">Connect</div></a>
+</div>
+</div>
+</form>
+
 <% end %>
+
+

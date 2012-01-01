@@ -8,6 +8,12 @@ div.dashboard {
   background: url('/images/new_dash_rainbow2.png') no-repeat top;
   }
   
+div.account_dashboard {
+  min-height: 800px;
+  background: url('/images/login_page_graphic.png') no-repeat top;
+  margin-top: 10px;
+  }
+  
 div.share {
   width: 420px;
   margin: auto;
@@ -24,7 +30,7 @@ div.account {
   margin-top: 40px;
   position: relative;
   overflow: hidden;
-  text-align: left; 
+  text-align: left;
 }
 
 div.account#dashboard {
@@ -35,21 +41,22 @@ div.account#dashboard {
   }
   
   div.account#login {
-  min-height: 300px;
+  min-height: 250px;
   width: 350px;
   padding-bottom: 20px;
   padding-left: 45px;
+  margin-top: 210px;
   }
   
   div.account#forgot {
-  min-height: 300px;
+  min-height: 200px;
   width: 350px;
   padding-bottom: 20px;
   padding-left: 45px;
   }
   
   div.account#signup {
-  min-height: 500px;
+  min-height: 300px;
   width: 350px;
   padding-bottom: 25px;
   padding-top: 5px;
@@ -96,8 +103,9 @@ div.figure3 {
 
 body, p, ol, ul, td {
  font-family: 'Corben', cursive;
-  font-size:   18px;
+  font-size:   14px;
   color: #292b2f;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -110,10 +118,12 @@ h1 {
 }
 
 div.info {
-   color: #FFFFFF;
-   font-size: 18px;
-   margin-top: -15px;
+   background: url('/images/text_head.png') no-repeat center;
+   min-height: 50px;
+   padding-top: 0px;
+   margin-top: 0px;
 }
+
 div.main_content {
   text-align: center;
   visibility: visible;
@@ -191,17 +201,17 @@ form input[type="text"] {
 }
 
 form input[type="text"]#user_name{
-  font-size: 18px;
+  font-size: 12px;
   width: 300px;
 }
 
 form input[type="password"]{
-  font-size: 18px;
+  font-size: 12px;
   width: 300px;
 }
 
 form input[type="email"]{
-  font-size: 18px;
+  font-size: 12px;
   width: 300px;
 }
 

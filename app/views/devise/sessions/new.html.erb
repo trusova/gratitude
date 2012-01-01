@@ -1,7 +1,7 @@
+<div class="dashboard">
+  <div class="main_content">
 <div class="account" id="login">
 <h2>Sign in</h2>
-<a href="/auth/facebook"><div class="fb-login-button" size="large">Login with Facebook</div></a>
-  <p>-or-</p>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <p><%= f.label :email %><br />
   <%= f.email_field :email %></p>
@@ -10,12 +10,12 @@
   <%= f.password_field :password %></p>
 
   <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+    <p style="line-height: .3em"><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
   <% end -%>
 
-  <p><%= f.submit "Sign in" %></p>
+  <p style="line-height: .3em"><%= f.submit "Sign in" %></p>
 <% end %>
+<p style="line-height: .3em">Don't have an account? &nbsp;<a href="/users/sign_up">Sign Up</a></p>
 </div>
-
-
-
+  </div>
+</div>

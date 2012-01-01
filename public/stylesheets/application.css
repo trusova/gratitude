@@ -18,10 +18,25 @@ ul.gmenu {
   background: rgba(203, 226, 219, 0.5);
   width: 420px;
   margin: auto;
-  overflow: hidden;
   position: relative;
   
 }
+
+ul.landing_menu {
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  margin-top: 0px;
+  font-family: 'Cabin Sketch', cursive;
+  color: #666666;
+  font-size: 20px;
+  background: rgba(203, 226, 219, 0.5);
+  width: 420px;
+  margin: auto;
+  position: relative;
+  
+}
+
 
 ul.hmenu li {
   display: inline;

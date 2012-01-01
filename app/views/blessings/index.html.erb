@@ -12,10 +12,6 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
     
 <%= render 'form' %>
 
-<div class="fb-like" data-layout="button_count" data-send="true" data-href="http://gratitude.is/sharedby/<%=params[:name]%>" data-width="20" data-show-faces="true"></div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=params[:name]%>" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
   <ul id="gratitude" class="gmenu">
 <% counter = 0 %>
 <%   days = 0 %>
@@ -52,6 +48,11 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
  <div class="days" id="days">
     <div class="day_counter">day <%=days/3 %></div>
   </div>
+ 
+ <div class="fb-like" data-layout="button_count" data-send="true" data-href="http://gratitude.is/sharedby/<%=params[:name]%>" data-width="20" data-show-faces="true"></div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=params[:name]%>" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
   <!--<ul id="gratitude" class="gmenu">-->
     <% counter = 0 %>
   <!-- <br/>
