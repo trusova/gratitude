@@ -14,74 +14,41 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
 <% if user_signed_in? %>
 
 <% if @blessings %>
-
-<ul id="gratitude" class="gmenu">
   
 <% counter = 0 %>
 <%   days = 0 %>
 
 <% @blessings.each do |blessing| %>
 
+<% if counter == 0 %>
+<div class="grat_block">
+<div class="text_block">
+<ul id="gratitude" class="gmenu">
+
+<% end %>
+
   <% counter += 1 %>
   <% days += 1 %>
 
   <li><%= blessing.answer %></li>
-    <!--<div class="figure1" id="figure1"></div>
-    <div class="figure2" id="figure2"></div>
-      <div class="figure3" id="figure3"></div>-->
-
-  <% if counter == 1 %>
-  <script type="text/javascript">
-      //document.getElementById('figure3').style.visibility = 'visible';
-      document.getElementById('rainbow').style.backgroundPosition = '0 -175px';
-   </script>
-  <% end %>
-  
-    <% if counter == 2 %>
-  <script type="text/javascript">
-      //document.getElementById('figure2').style.visibility = 'visible';
-   </script>
-  <% end %>
-
+    
   <% if counter == 3 %>
-   <!--<div class="days" id="days">
-    <div class="day_counter"><%=days/3 %></div>
-  </div>-->
-<!--
-SHARE BUTTONS
-<div class="share">
-  <div style="width: 20px; float: left;" class="fb-like" data-layout="button_count" data-send="true" data-href="http://gratitude.is/sharedby/<%=current_user.cached_slug%>" data-show-faces="true"></div>
-</div>
-<div style="width: 20px; float: left;">
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
-</div>-->
+
   </ul>
-   <script type="text/javascript">
-      //document.getElementById('figure1').style.visibility = 'visible';
-      document.getElementById('rainbow').style.backgroundPosition = '0 -175px';
-   </script>
- <br/>
+</div>
+<div class="hex"></div>
+</div>
+<div style="height: 10px;"></div>
  <% counter = 0 %>
-  <ul id="gratitude" class="gmenu">
-  <br/>
-   <script type="text/javascript">
-      document.getElementById('rainbow').style.backgroundPosition = '0 0';
-   </script>
+
     <% end %>
-    <!--<td><%= link_to 'Show', blessing %></td>
-    <td><%= link_to 'Edit', edit_blessing_path(blessing) %></td>
-    <td><%= link_to 'Destroy', blessing, :confirm => 'Are you sure?', :method => :delete %></td>-->
+   
 <% end %>
-  </ul>
+
   <% end %>
   <% end %>
-<!--</div>
-  </div>
-  </div>-->
+
       </div>
 
     </div>
 
-<!--<%= link_to 'Back', blessings_path %>-->

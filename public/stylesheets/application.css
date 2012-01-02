@@ -16,7 +16,7 @@ ul.gmenu {
   font-family: 'Cabin Sketch', cursive;
   color: #666666;
   font-size: 20px;
-  background: rgba(203, 226, 219, 0.5);
+  /*background: rgba(203, 226, 219, 0.5);*/
   width: 410px;
   margin: auto;
   position: relative;
@@ -42,7 +42,7 @@ ul.landing_menu {
 ul.hmenu li {
   display: inline;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Corben', cursive;
   padding-top: 15px;
 }

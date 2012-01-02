@@ -6,6 +6,7 @@ body {
 div.dashboard {
   min-height: 800px;
   background: url('/images/new_dash_rainbow2.png') no-repeat top;
+  margin-top: 20px;
   }
   
 div.account_dashboard {
@@ -69,42 +70,10 @@ div.question {
   min-height: 66px;
 }
 
-div.rainbow {
-  background: url('/images/rainbow_combo2.png') no-repeat 0 -175px;
-  visibility: visible;
-  overflow: hidden;
-  position: relative;
-  min-height: 166px;
-  width: 330px;
-  margin: auto;
-}
-
-div.figures {
-  background: url('/images/figures.png') no-repeat top;
-  visibility: hidden;
-  min-height: 500px;
-}
-
-
-div.figure1 {
-  background: url('/images/large_hexa_outline.png') no-repeat;
-  visibility: hidden;
-
-  }
-
-div.figure2 {
-  background: url('/images/medium_hexa_outline.png') no-repeat bottom;
-  visibility: hidden;
-}
-
-div.figure3 {
-  background: url('/images/large_hexa_outline.png') no-repeat bottom;
-  visibility: hidden;
-}
 
 body, p, ol, ul, td {
  font-family: 'Corben', cursive;
-  font-size:   14px;
+  font-size:   16px;
   color: #292b2f;
   line-height: 1.5em;
 }
@@ -125,12 +94,148 @@ div.info {
    margin-top: 0px;
 }
 
+div.headline {
+  background: url('/images/research_text.png') no-repeat center;
+  text-align: center;
+  padding: 16px;
+}
+
 div.main_content {
   text-align: center;
   visibility: visible;
   overflow: hidden;
   position: relative;
   margin: auto;
+}
+
+
+div.grat_block {
+  margin: 0 auto;
+  width: 420px;
+  background: rgba(203, 226, 219, 0.5);
+  min-height: 110px;
+}
+
+div.text_block {   
+    width: 340px;
+    padding: 10px;
+    float: right;
+}
+
+div.hex {
+  width: 66px;
+  min-height: 56px;
+  padding: 10px;
+  margin: 5px;
+  background: url('/images/light_hex.png') no-repeat;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #FFFFFF; }
+a:visited { color: #FFFFFF; }
+a:hover { color: #fff; 
+}
+
+
+div.field, div.actions {
+  margin-bottom: 10px;
+  margin-top: 130px;
+}
+
+form input[type="text"] {
+  font-size: 18px;
+  width: 420px;
+}
+
+form input[type="text"]#user_name{
+  font-size: 12px;
+  width: 300px;
+}
+
+form input[type="password"]{
+  font-size: 12px;
+  width: 300px;
+}
+
+form input[type="email"]{
+  font-size: 12px;
+  width: 300px;
+}
+
+.login {
+background: url('/images/login.png') 0 0 no-repeat;
+margin: 0;
+padding: 0;
+border: none;
+width: 79px;
+height: 28px;
+}
+
+.send {
+background: url('/images/send.png') 0 0 no-repeat;
+margin: 0;
+padding: 0;
+border: none;
+width: 67px;
+height: 28px;
+}
+
+.update {
+background: url('/images/update.png') 0 0 no-repeat;
+margin: 0;
+padding: 0;
+border: none;
+width: 79px;
+height: 28px;
+}
+
+.sign_up {
+background: url('/images/sign-up.png') 0 0 no-repeat;
+margin: 0;
+padding: 0;
+border: none;
+width: 79px;
+height: 28px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+}
+
+#error_explanation {
+  width: 450px;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+#error_explanation ul {
+  color: #ae3535;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 14px;
+  margin: -7px;
+  margin-bottom: 0px;
+}
+
+#error_explanation ul li {
+  font-size: 14px;
+  list-style: none;
 }
 
 div.light_wide_block {
@@ -179,83 +284,35 @@ div.line {
   height: 50px;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a { color: #FFFFFF; }
-a:visited { color: #FFFFFF; }
-a:hover { color: #fff; 
-}
-
-
-div.field, div.actions {
-  margin-bottom: 10px;
-  margin-top: 130px;
-}
-
-form input[type="text"] {
-  font-size: 18px;
-  width: 420px;
-}
-
-form input[type="text"]#user_name{
-  font-size: 12px;
-  width: 300px;
-}
-
-form input[type="password"]{
-  font-size: 12px;
-  width: 300px;
-}
-
-form input[type="email"]{
-  font-size: 12px;
-  width: 300px;
-}
-
-.login {
-background: url('/images/login.png') 0 0 no-repeat;
-margin: 0;
-padding: 0;
-border: none;
-width: 79px;
-height: 25px;
-}
-
-#notice {
-  color: green;
-}
-
-.field_with_errors {
-}
-
-#error_explanation {
-  width: 450px;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  position: relative;
-  margin: auto;
+div.rainbow {
+  background: url('/images/rainbow_combo2.png') no-repeat 0 -175px;
+  visibility: visible;
   overflow: hidden;
+  position: relative;
+  min-height: 166px;
+  width: 330px;
+  margin: auto;
 }
 
-#error_explanation ul {
-  color: #ae3535;
+div.figures {
+  background: url('/images/figures.png') no-repeat top;
+  visibility: hidden;
+  min-height: 500px;
 }
 
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 14px;
-  margin: -7px;
-  margin-bottom: 0px;
+
+div.figure1 {
+  background: url('/images/large_hexa_outline.png') no-repeat;
+  visibility: hidden;
+
+  }
+
+div.figure2 {
+  background: url('/images/medium_hexa_outline.png') no-repeat bottom;
+  visibility: hidden;
 }
 
-#error_explanation ul li {
-  font-size: 14px;
-  list-style: none;
+div.figure3 {
+  background: url('/images/large_hexa_outline.png') no-repeat bottom;
+  visibility: hidden;
 }

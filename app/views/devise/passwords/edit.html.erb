@@ -12,7 +12,7 @@
   <p><%= f.label :password_confirmation, "Confirm new password" %><br />
   <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.submit "Change my password" %></p>
+  <p><input id="user_submit" class="update" name="commit" type="submit" value="" /></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

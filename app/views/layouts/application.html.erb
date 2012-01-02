@@ -23,8 +23,12 @@
 <div class="nav">
   <ul class="hmenu">
     <li class="logo"><a href="/"><img src="/images/logo_small.png"></a></li>
+    <% if user_signed_in? %>
     <%= render 'devise/menu/registration_items' %>
     <%= render 'devise/menu/login_items' %>
+    <% else %>
+      <div class="headline"></div>
+    <% end %>
   </ul>
 </div>
 
