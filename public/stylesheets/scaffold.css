@@ -1,16 +1,19 @@
 body {
   background: url('/images/bg_half.png') repeat top #cabfb1;
   text-align: center;
+  height: 100%;
 }
 
 div.dashboard {
   min-height: 800px;
+  height: 100%;
   background: url('/images/new_dash_rainbow2.png') no-repeat top;
   margin-top: 20px;
   }
   
 div.account_dashboard {
   min-height: 800px;
+  height: 100%;
   background: url('/images/login_page_graphic.png') no-repeat top;
   margin-top: 10px;
   }
@@ -107,6 +110,7 @@ div.main_content {
   overflow: hidden;
   position: relative;
   margin: auto;
+  min-height: 100%;
 }
 
 
@@ -131,6 +135,14 @@ div.hex {
   background: url('/images/light_hex.png') no-repeat center;
 }
 
+
+div.entry {
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 30px;
+  padding: 15px;
+  width: 390px;
+  margin: 0 auto;
+}
 pre {
   background-color: #eee;
   padding: 10px;
