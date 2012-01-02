@@ -7,6 +7,15 @@ ul.hmenu {
   visibility: visible;
 }
 
+ul.bmenu {
+  list-style: none;
+  text-align: left;
+  padding: 0px;
+  padding-right: 15px;
+  margin-top: 0px;
+  visibility: visible;
+}
+
 ul.gmenu {
   list-style: none;
   text-align: left;
@@ -17,7 +26,6 @@ ul.gmenu {
   color: #666666;
   font-size: 20px;
   /*background: rgba(203, 226, 219, 0.5);*/
-  width: 410px;
   margin: auto;
   position: relative;
   
@@ -47,6 +55,18 @@ ul.hmenu li {
   padding-top: 15px;
 }
 
+ul.bmenu li {
+  display: inline;
+  font-size: 18px;
+  font-family: 'Corben', cursive;
+  padding: 15px;
+}
+
+ul.bmenu a {
+  text-decoration: none;
+  color: #a49d96;
+}
+
 ul.hmenu li.logo {
  float: left;
  padding-left: 15px;
@@ -63,4 +83,9 @@ div.nav {
 background-color: #ede9e4;
 height: 30px;
 margin: -10px;
+}
+
+div.bottom_nav {
+background-color: #ede9e4;
+height: 30px;
 }

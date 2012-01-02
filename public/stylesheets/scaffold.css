@@ -61,6 +61,7 @@ div.account#dashboard {
   min-height: 300px;
   width: 400px;
   padding-bottom: 25px;
+    margin-top: 210px;
   padding-top: 5px;
   padding-left: 45px;
   }
@@ -74,7 +75,7 @@ div.question {
 body, p, ol, ul, td {
  font-family: 'Corben', cursive;
   font-size:   16px;
-  color: #292b2f;
+  color: #666666;
   line-height: 1.5em;
 }
 
