@@ -9,11 +9,10 @@ ul.hmenu {
 
 ul.bmenu {
   list-style: none;
-  text-align: left;
+  text-align: right;
   padding: 0px;
   padding-right: 15px;
   margin-top: 0px;
-  visibility: visible;
 }
 
 ul.gmenu {
@@ -64,7 +63,7 @@ ul.bmenu li {
 
 ul.bmenu a {
   text-decoration: none;
-  color: #a49d96;
+  color: #666666;
 }
 
 ul.hmenu li.logo {
@@ -86,7 +85,25 @@ margin: -10px;
 }
 
 div.bottom_nav {
-background-color: #ede9e4;
+  margin: 0 auto;
+  width: 100%;
+/*background-color: #ede9e4;
 height: 30px;
+width: 100%;
+margin: -10px;
 margin-bottom: 0px;
+position: absolute;*/
 }
+
+div.copy {
+  width: 150px;
+  float: left;
+  padding-bottom: 0;
+}
+
+div.subnav {
+  width: 300px;
+  float: right;
+  padding-bottom: 0;
+}
+

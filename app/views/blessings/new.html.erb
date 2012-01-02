@@ -18,6 +18,7 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
 <% counter = 0 %>
 <%   days = 0 %>
 
+<div>
 <% @blessings.each do |blessing| %>
 
 <% if counter == 0 %>
@@ -31,6 +32,7 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
   <% days += 1 %>
 
   <li><%= blessing.answer %></li>
+   
     
   <% if counter == 3 %>
 
@@ -44,6 +46,8 @@ shows that recording 3 gratitudes a day for 30 days can rewire your brain and ma
     <% end %>
    
 <% end %>
+
+</div>
 
   <% end %>
   <% end %>
