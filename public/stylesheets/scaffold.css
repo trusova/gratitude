@@ -16,12 +16,12 @@ div.account_dashboard {
   
 div.share {
   width: 420px;
-  margin: auto;
-  position: relative;
-  text-align:right;
-  padding-top: 25px;
-  padding-right: 0px;
-  float: right; 
+  margin: 0 auto;
+  /*position: relative;*/
+  /*text-align:right;*/
+  /*padding-top: 25px;
+  padding-right: 0px;*/
+ /* float: right; */
 }
 
 div.account {
@@ -29,7 +29,6 @@ div.account {
   margin: auto;
   margin-top: 40px;
   position: relative;
-  overflow: hidden;
   text-align: left;
 }
 
@@ -46,18 +45,20 @@ div.account#dashboard {
   padding-bottom: 20px;
   padding-left: 45px;
   margin-top: 210px;
+  padding-top: 10px;
   }
   
   div.account#forgot {
   min-height: 200px;
-  width: 350px;
+  width: 400px;
   padding-bottom: 20px;
   padding-left: 45px;
+  padding-top: 10px;
   }
   
   div.account#signup {
   min-height: 300px;
-  width: 350px;
+  width: 400px;
   padding-bottom: 25px;
   padding-top: 5px;
   padding-left: 45px;
@@ -213,6 +214,15 @@ form input[type="password"]{
 form input[type="email"]{
   font-size: 12px;
   width: 300px;
+}
+
+.login {
+background: url('/images/login.png') 0 0 no-repeat;
+margin: 0;
+padding: 0;
+border: none;
+width: 79px;
+height: 25px;
 }
 
 #notice {

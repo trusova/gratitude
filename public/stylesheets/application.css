@@ -9,14 +9,15 @@ ul.hmenu {
 
 ul.gmenu {
   list-style: none;
-  text-align: center;
+  text-align: left;
   padding: 0px;
+  padding-left: 10px;
   margin-top: 0px;
   font-family: 'Cabin Sketch', cursive;
   color: #666666;
   font-size: 20px;
   background: rgba(203, 226, 219, 0.5);
-  width: 420px;
+  width: 410px;
   margin: auto;
   position: relative;
   
@@ -24,17 +25,17 @@ ul.gmenu {
 
 ul.landing_menu {
   list-style: none;
-  text-align: center;
+  text-align: left;
   padding: 0px;
+  padding-left: 10px;
   margin-top: 0px;
   font-family: 'Cabin Sketch', cursive;
   color: #666666;
   font-size: 20px;
   background: rgba(203, 226, 219, 0.5);
-  width: 420px;
+  width: 410px;
   margin: auto;
   position: relative;
-  
 }
 
 

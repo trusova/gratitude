@@ -1,4 +1,5 @@
-<div class="account" id="login">
+<div class="account_dashboard">
+<div class="account" id="forgot">
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
@@ -13,3 +14,4 @@
 <%= render :partial => "devise/shared/links" %>
 </div>
 <br/>
+</div>
