@@ -61,7 +61,7 @@ div.account#dashboard {
   min-height: 300px;
   width: 400px;
   padding-bottom: 25px;
-    margin-top: 210px;
+  margin-top: 210px;
   padding-top: 5px;
   padding-left: 45px;
   }
@@ -113,22 +113,22 @@ div.main_content {
 div.grat_block {
   margin: 0 auto;
   width: 420px;
-  background: rgba(203, 226, 219, 0.5);
   min-height: 110px;
 }
 
-div.text_block {   
+div.text_block {
+    background: rgba(203, 226, 219, 0.5);
     width: 340px;
     padding: 10px;
+    padding-left: 70px;
     float: right;
 }
 
 div.hex {
   width: 66px;
   min-height: 56px;
-  padding: 10px;
-  margin: 5px;
-  background: url('/images/light_hex.png') no-repeat;
+  padding: 5px;
+  background: url('/images/light_hex.png') no-repeat center;
 }
 
 pre {
