@@ -83,10 +83,12 @@ ul.hmenu a {
   padding-right: 15px;
 }
 
-div.nav {
+#nav {
 background-color: #ede9e4;
 height: 30px;
+width: 100%;
 margin: -10px;
+padding-right: 20px;
 }
 
 div.bottom_nav {
