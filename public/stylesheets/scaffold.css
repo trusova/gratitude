@@ -149,6 +149,7 @@ div.entry {
   padding: 15px;
   width: 390px;
   margin: 0 auto;
+  margin-top: 15px;
 }
 pre {
   background-color: #eee;
