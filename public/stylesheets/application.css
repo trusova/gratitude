@@ -54,6 +54,11 @@ ul.hmenu li {
   padding-top: 15px;
 }
 
+ul.gmenu li {
+  line-height: 90%;
+  padding-bottom: 10px;
+}
+
 ul.bmenu li {
   display: inline;
   font-size: 18px;
@@ -85,13 +90,14 @@ margin: -10px;
 }
 
 div.bottom_nav {
-  margin: 0 auto;
   width: 100%;
-  clear: both;
-  position: relative;
-/*background-color: #ede9e4;
+  margin-left: -10px;
+  margin-bottom: -10px;
+  padding-right: 20px;
+  overflow: hidden;
+  background-color: #ede9e4;
 height: 30px;
-width: 100%;
+/*padding: 10px;
 margin: -10px;
 margin-bottom: 0px;
 position: absolute;*/
