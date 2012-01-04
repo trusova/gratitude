@@ -1,10 +1,6 @@
 ul.hmenu {
   list-style: none;
   text-align: right;
-  padding: 0px;
-  padding-right: 15px;
-  margin-top: 0px;
-  visibility: visible;
 }
 
 ul.bmenu {
@@ -49,9 +45,10 @@ ul.landing_menu {
 ul.hmenu li {
   display: inline;
   text-align: center;
+  line-height: 1em;
   font-size: 18px;
   font-family: 'Corben', cursive;
-  padding-top: 15px;
+  padding-right: 15px;
 }
 
 ul.gmenu li {
@@ -73,36 +70,19 @@ ul.bmenu a {
 
 ul.hmenu li.logo {
  float: left;
- padding-left: 15px;
- padding-top: 5px;
+  margin-left: -15px;
+  padding-top: 5px;
 }
 
 ul.hmenu a {
   text-decoration: none;
   color: #a49d96;
-  padding-right: 15px;
 }
 
 #nav {
 background-color: #ede9e4;
 height: 30px;
 width: 100%;
-margin: -10px;
-padding-right: 20px;
-}
-
-div.bottom_nav {
-  width: 100%;
-  margin-left: -10px;
-  margin-bottom: -10px;
-  padding-right: 20px;
-  overflow: hidden;
-  background-color: #ede9e4;
-height: 30px;
-/*padding: 10px;
-margin: -10px;
-margin-bottom: 0px;
-position: absolute;*/
 }
 
 div.copy {

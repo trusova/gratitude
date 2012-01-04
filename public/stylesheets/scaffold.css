@@ -4,6 +4,23 @@ body {
   height: 100%;
 }
 
+
+* {
+margin: 0;
+}
+html {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -2em;
+}
+.footer, .push {
+height: 2em;
+}
+
 div.dashboard {
   min-height: 800px;
   height: 100%;
@@ -21,7 +38,7 @@ div.account_dashboard {
 div.share {
   width: 420px;
   margin: 0 auto;
-  /*position: relative;*/
+  position: relative;
   /*text-align:right;*/
   /*padding-top: 25px;
   padding-right: 0px;*/
@@ -86,7 +103,7 @@ body, p, ol, ul, td {
  font-family: 'Corben', cursive;
   font-size:   16px;
   color: #666666;
-  line-height: 1.5em;
+  /*line-height: 1.5em;*/
 }
 
 h1 {
@@ -138,8 +155,17 @@ div.text_block {
 div.hex {
   width: 66px;
   min-height: 56px;
-  padding: 5px;
   background: url('/images/light_hex.png') no-repeat center;
+  text-align: center;
+  text-indent: 18px;
+  line-height: 35px;
+  font-size: 20px;
+  padding: 20px 15px 0 0;
+  color: #c79d70;
+  position: absolute;
+  font-family: 'Cabin Sketch', cursive;
+  /*bottom: 10px;
+  right: 2px;*/
 }
 
 

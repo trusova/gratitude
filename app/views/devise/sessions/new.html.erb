@@ -10,12 +10,12 @@
   <%= f.password_field :password %></p>
 
   <% if devise_mapping.rememberable? -%>
-    <p style="line-height: .3em"><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
   <% end -%>
 
-  <p style="line-height: .3em;"><input id="user_submit"  class="login" name="commit" type="submit" value="" /></p>
+  <p><input id="user_submit"  class="login" name="commit" type="submit" value="" /></p>
 <% end %>
-<p style="line-height: .3em">Don't have an account? &nbsp;<a href="/users/sign_up">Sign Up</a></p>
+<p>Don't have an account? &nbsp;<a href="/users/sign_up">Sign Up</a></p>
 </div>
   </div>
 </div>
