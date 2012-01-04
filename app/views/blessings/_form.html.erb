@@ -42,7 +42,7 @@
 </div>
 
 <div style="height: 40px;"></div>-->
-
+<% if params[:name].nil? %>
 <div class="entry">
 <div style="float:left; width: 90px;">
 <a href="/users/sign_up"><img src="/images/sign-up.png" />
@@ -58,6 +58,7 @@
 <!--<div class="fb-login-button" size="large">Connect</div>-->
 </div>
 </div>
+<% end %>
 
 </form>
 
