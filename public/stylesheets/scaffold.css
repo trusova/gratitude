@@ -1,16 +1,13 @@
 body {
   background: url('/images/bg_half_4bit.jpg') repeat-x top #cabfb1;
   text-align: center;
-  height: 100%;
 }
 
 
 * {
 margin: 0;
 }
-html {
-height: 100%;
-}
+
 .wrapper {
 min-height: 100%;
 height: auto !important;
@@ -23,9 +20,24 @@ height: 2em;
 
 div.dashboard {
   min-height: 800px;
-  height: 100%;
   background: url('/images/sun_bg.png') no-repeat top;
   margin-top: 20px;
+  }
+  
+  div.dashboard_reverse {
+  min-height: 800px;
+  margin-top: -25px;
+  height: 100%;
+  width: 100%;
+  background: transparent url('/images/tri3.png') no-repeat center;
+  }
+  
+   div.dashboard_reverse2 {
+  min-height: 800px;
+  margin-top: -635px;
+  height: 100%;
+  width: 100%;
+  background: transparent url('/images/tri1.png') no-repeat center;
   }
   
 div.account_dashboard {
