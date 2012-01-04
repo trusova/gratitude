@@ -34,16 +34,6 @@ div.account_dashboard {
   background: url('/images/login_page_graphic.png') no-repeat top;
   margin-top: 10px;
   }
-  
-div.share {
-  width: 420px;
-  margin: 0 auto;
-  position: relative;
-  /*text-align:right;*/
-  /*padding-top: 25px;
-  padding-right: 0px;*/
- /* float: right; */
-}
 
 div.account {
   background: rgba(255, 255, 255, 0.5);
@@ -148,8 +138,21 @@ div.text_block {
     background: rgba(203, 226, 219, 0.5);
     width: 340px;
     padding: 10px;
+    padding-bottom: 0px;
     padding-left: 70px;
     float: right;
+}
+
+  
+div.share {
+  width: 405px;
+  margin: 0 auto;
+  height: 40px;
+  text-align: right;
+  background: rgba(203, 226, 219, 0.5);
+  padding-right: 15px;
+  margin-top: -16px;
+  
 }
 
 div.hex {
@@ -164,8 +167,6 @@ div.hex {
   color: #c79d70;
   position: absolute;
   font-family: 'Cabin Sketch', cursive;
-  /*bottom: 10px;
-  right: 2px;*/
 }
 
 
@@ -303,63 +304,9 @@ div.gratitudes {
    vertical-align: middle; 
 }
 
-div.days {
-  margin:auto;
-  width: 65px;
-  height: 70px;
-  float: left;
-  color: #B3B3B3;
-  background: url('/images/light_hex.png') no-repeat;
-  visibility: visible;
-  font-size: 18px;
-  position: relative;
-  overflow: hidden;
-}
-
-div.day_counter {
-  text-align: center;
-  color: #c1a986;
-  position: relative;
-  overflow: hidden;
-  padding-top: 15px;
-}
-
 div.line {
   background: url('/images/dotted_line.jpg') no-repeat;
   margin-top: 40px;
   margin-left: 47px;
   height: 50px;
-}
-
-div.rainbow {
-  background: url('/images/rainbow_combo2.png') no-repeat 0 -175px;
-  visibility: visible;
-  overflow: hidden;
-  position: relative;
-  min-height: 166px;
-  width: 330px;
-  margin: auto;
-}
-
-div.figures {
-  background: url('/images/figures.png') no-repeat top;
-  visibility: hidden;
-  min-height: 500px;
-}
-
-
-div.figure1 {
-  background: url('/images/large_hexa_outline.png') no-repeat;
-  visibility: hidden;
-
-  }
-
-div.figure2 {
-  background: url('/images/medium_hexa_outline.png') no-repeat bottom;
-  visibility: hidden;
-}
-
-div.figure3 {
-  background: url('/images/large_hexa_outline.png') no-repeat bottom;
-  visibility: hidden;
 }
