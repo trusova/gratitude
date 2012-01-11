@@ -68,7 +68,7 @@ body {
 	font-family: Arial,sans-serif;
 }
 h1 {
-	color: #21a97e;
+	color: #d27512;
 }
 a, a:link,
 a:active,
@@ -127,14 +127,16 @@ hr {
 nav#primary {
 	z-index: 5;
 	position: fixed;
-	top: 50%;
+	top: 20%;
 	right: 16px;
 	margin-top: -40px;
 }
+
 nav#primary li {
 	position: relative;
 	height: 40px;
 }
+
 nav#primary a {
 	display: block;
 	width: 40px;
@@ -188,6 +190,19 @@ ul.gmenu li {
   padding-bottom: 10px;
 }
 
+div.hex {
+  width: 80px;
+  min-height: 56px;
+  text-align: center;
+  text-indent: 2px;
+  line-height: 35px;
+  font-size: 20px;
+  padding: 3px 0 0 0;
+  color: #d27512;
+  position: absolute;
+  font-family: 'Cabin Sketch', cursive;
+}
+
 nav#primary a:hover, nav#primary a.active {
 	/*background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;*/
 }
@@ -233,9 +248,10 @@ nav.next-prev {
 #content {
 	z-index: 4;
 	position: relative;
-	max-width: 940px;
+	left: 31%;
 	padding: 0 10px;
 	margin: 0 auto;
+	
 	line-height: 1.7;
 	}
 	#content article {
@@ -245,7 +261,7 @@ nav.next-prev {
 		#frameless-parachute,
 		#english-channel,
 		#about {
-			padding-top: 105px;
+			padding-top: 255px;
 			}
 		#manned-flight {
 			position: absolute;
@@ -253,11 +269,11 @@ nav.next-prev {
 			}
 		#frameless-parachute {
 			position: absolute;
-			top: 1090px;
+			top: 150px;
 			}
 		#english-channel {
 			position: absolute;
-			top: 2180px;
+			top: 300px;
 			}
 			#content h1 {
 				margin: 0 0 25px 0;
@@ -268,7 +284,7 @@ nav.next-prev {
 				}
 		#about {
 			position: absolute;
-			top: 3270px;
+			top: 450px;
 			}
 /* foreground (ballons/landscape) */
 #parallax-bg3 {
@@ -277,7 +293,7 @@ nav.next-prev {
 	left: 50%; /* align left edge with center of viewport */
 	top: 0;
 	width: 940px;
-	margin-left: -470px; /* move left by half element's width */
+	margin-left: -400px; /* move left by half element's width */
 	}
 	/* balloon */
 	#bg3-1 {
@@ -292,12 +308,12 @@ nav.next-prev {
 		}
 	#bg3-3 {
 		position: absolute;
-		top: 1000px;
+		top: 1400px;
 		left: -85px;
 		}
 	#bg3-4 {
 		position: absolute;
-		top: 2000px;
+		top: 2110px;
 		left: -85px;
 		}
 /* midground (clouds) */
@@ -307,32 +323,32 @@ nav.next-prev {
 	left: 50%; /* align left edge with center of viewport */
 	top: 0;
 	width: 1200px;
-	margin-left: -600px; /* move left by half element's width */
+	margin-left: -635px; /* move left by half element's width */
 	}
 	#bg2-1 {
 		position: absolute;
-		top: 162px;
+		top: 133px;
 		left: 200px;
 		}
 	#bg2-2 {
 		position: absolute;
 		top: 300px;
-		left: 1150px;
+		left: 200px;
 		}
 	#bg2-3 {
 		position: absolute;
-		top: 543px;
-		left: -35px;
+		top: 723px;
+		left: 200px;
 		}
 	#bg2-4 {
 		position: absolute;
 		top: 1180px;
-		left: 250px;
+		left: 200px;
 		}
 	#bg2-5 {
 		position: absolute;
 		top: 900px;
-		left: 890px;
+		left: 200px;
 		}
 /* background (clouds) */
 #parallax-bg1 {
@@ -341,26 +357,26 @@ nav.next-prev {
 	left: 50%; /* align left edge with center of viewport */
 	top: 0;
 	width: 1200px;
-	margin-left: -600px; /* move left by half element's width */
+	margin-left: -630px; /* move left by half element's width */
 	}
 	#bg1-1 {
 		position: absolute;
 		top: 85px;
-		left: -270px;
+		left: 180px;
 		}
 	#bg1-2 {
 		position: absolute;
 		top: 440px;
-		left: 795px;
+		left: 200px;
 		}
 	#bg1-3 {
 		position: absolute;
 		top: 900px;
-		left: -220px;
+		left: 200px;
 		}
 	#bg1-4 {
 		position: absolute;
 		top: 1020px;
-		left: 450px;
+		left: 200px;
 		}
 
