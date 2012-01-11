@@ -1,8 +1,7 @@
 body {
-  background: url('/images/bg_half_4bit.jpg') repeat-x top #cabfb1;
+  background: url('/images/bg_half_4bit.jpg') repeat top #cabfb1;
   text-align: center;
 }
-
 
 * {
 margin: 0;
@@ -20,24 +19,27 @@ height: 2em;
 
 div.dashboard {
   min-height: 800px;
-  background: url('/images/sun_bg.png') no-repeat top;
+  background: url('/images/tri_rainbow.png') no-repeat top;
   margin-top: 20px;
   }
   
+  /* sun_bg.png,tri3.png, tri1.png */
+    
   div.dashboard_reverse {
   min-height: 800px;
-  margin-top: -25px;
-  height: 100%;
+  margin-top: 10px;
+  position: relative;
   width: 100%;
-  background: transparent url('/images/tri3.png') no-repeat center;
+  height: 100%;
+  background: transparent url('/images/continue_whole.png') no-repeat center;
   }
   
    div.dashboard_reverse2 {
   min-height: 800px;
-  margin-top: -635px;
+  margin-top: -50px;
   height: 100%;
   width: 100%;
-  background: transparent url('/images/tri1.png') no-repeat center;
+  background: transparent url('/images/triangle_normal_rotated.png') no-repeat center;
   }
   
 div.account_dashboard {
@@ -144,6 +146,7 @@ div.grat_block {
   margin: 0 auto;
   width: 420px;
   min-height: 110px;
+  height: 100%;
 }
 
 div.text_block {
@@ -165,6 +168,12 @@ div.share {
   padding-right: 15px;
   margin-top: -16px;
   
+}
+
+div.share2 {
+  width: 135px;
+  text-align: right;
+  padding-left: 270px;
 }
 
 div.hex {
@@ -205,6 +214,7 @@ a:hover { color: #788e87;
 div.field, div.actions {
   margin-bottom: 10px;
   margin-top: 130px;
+  
 }
 
 form input[type="text"] {
