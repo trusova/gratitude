@@ -17,10 +17,15 @@ margin: 0 auto -2em;
 height: 2em;
 }
 
+.footer a, a:visited, a:hover, a:active {
+   color: #666666;
+   text-decoration: none;
+}
+
 div.dashboard {
-  min-height: 800px;
+  min-height: 766px;
   background: url('/images/tri_rainbow.png') no-repeat top;
-  margin-top: 30px;
+  margin-top: 25px;
   }
   
   /* sun_bg.png,tri3.png, tri1.png */
@@ -85,6 +90,7 @@ div.account#terms {
   width: 400px;
   padding-bottom: 20px;
   padding-left: 45px;
+  margin-top: 210px;
   padding-top: 10px;
   }
   
@@ -100,6 +106,7 @@ div.account#terms {
 div.question {
   background: url('/images/question_final.png') no-repeat center;
   min-height: 66px;
+  padding-right: 150px;
 }
 
 
@@ -109,6 +116,7 @@ body, p, ol, ul, td {
   color: #666666;
   /*line-height: 1.5em;*/
 }
+
 
 h1 {
   color: #000000;
@@ -193,7 +201,7 @@ div.hex {
 
 div.entry {
   background: rgba(255, 255, 255, 0.5);
-  min-height: 30px;
+  min-height: 430px;
   padding: 15px;
   width: 390px;
   margin: 0 auto;

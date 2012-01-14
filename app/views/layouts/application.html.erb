@@ -31,12 +31,14 @@
 <div id="nav">
   <ul class="hmenu">
     <li class="logo"><a href="/"><img src="/images/logo_small.png"></a></li>
-    <% if user_signed_in? %>
+     <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items' %>
+   <!-- <% if user_signed_in? %>
     <%= render 'devise/menu/registration_items' %>
     <%= render 'devise/menu/login_items' %>
     <% else %>
       <div class="headline"></div>
-    <% end %>
+    <% end %>-->
   </ul>
 </div>
 </div>
@@ -61,7 +63,9 @@
 </div>
 
 <div class="footer">
-  <p>&copy; Blue Fig Labs</p>
+  <p>&copy; <a href="http://bluefiglabs.com" target="_blank" style="color: #666666;">Blue Fig Labs</a> -
+  <a href="/terms.html" style="color: #666666;">Terms</a> &
+  <a href="/privacy.html" style="color: #666666;">Privacy</a></p>
 </div>
 </div>
 </body>
