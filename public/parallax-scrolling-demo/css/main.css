@@ -59,7 +59,7 @@ html {
 	overflow-y: scroll; /* always force a scrollbar in non-IE */
 	}
 body {
-	background: url('/images/bg_half_4bit.jpg') repeat top #cabfb1;
+	background: url('/images/gradient.png') repeat-x top  #cabfb1;
 	overflow-x: hidden;
 	height: 4550px;
 	line-height: 1.5;
@@ -148,7 +148,9 @@ nav#primary a {
   line-height: 34px;
   font-size: 16px;
   padding: 5px 2px 0 0;
-  color: #c79d70;
+  /*color: #d27512;*/
+  color: #55a3a0;
+  font-family: 'Cabin Sketch', cursive;
   position: absolute;
   bottom: 10px;
   right: 2px;
@@ -161,7 +163,7 @@ div.grat_block {
 }
 
 div.text_block {
-    background: rgba(203, 226, 219, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     width: 340px;
     padding: 10px;
     padding-left: 70px;
