@@ -23,16 +23,16 @@ height: 2em;
 }
 
 div.dashboard {
-  min-height: 766px;
+  min-height: 800px;
   background: url('/images/dash_rainbow_test.png') no-repeat top;
-  margin-top: 25px;
+  margin-top: 45px;
   }
   
   /* sun_bg.png,tri3.png, tri1.png */
     
   div.dashboard_reverse {
   min-height: 800px;
-  margin-top: 10px;
+  margin-top: -14px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -44,7 +44,7 @@ div.dashboard {
   margin-top: -50px;
   height: 100%;
   width: 100%;
-  background: transparent url('/images/triangle_normal_rotated.png') no-repeat center;
+  background: transparent url('/images/new_tri_w.png') no-repeat center;
   }
   
 div.account_dashboard {
@@ -246,7 +246,7 @@ form input[type="email"]{
 }
 
 .login {
-background: url('/images/login.png') 0 0 no-repeat;
+background: url('/images/login_gr.png') 0 0 no-repeat;
 margin: 0;
 padding: 0;
 border: none;
@@ -255,7 +255,7 @@ height: 28px;
 }
 
 .send {
-background: url('/images/send.png') 0 0 no-repeat;
+background: url('/images/send_gr.png') 0 0 no-repeat;
 margin: 0;
 padding: 0;
 border: none;
@@ -264,7 +264,7 @@ height: 28px;
 }
 
 .update {
-background: url('/images/update.png') 0 0 no-repeat;
+background: url('/images/update_gr.png') 0 0 no-repeat;
 margin: 0;
 padding: 0;
 border: none;
@@ -273,7 +273,7 @@ height: 28px;
 }
 
 .sign_up {
-background: url('/images/sign-up.png') 0 0 no-repeat;
+background: url('/images/sign_up_gr.png') 0 0 no-repeat;
 margin: 0;
 padding: 0;
 border: none;

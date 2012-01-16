@@ -204,7 +204,8 @@ div.hex {
 }
 
 nav#primary a:hover, nav#primary a.active {
-	/*background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;*/
+	background: transparent url('/images/on_hex_side_nav.png') 4px 4px no-repeat;
+	color: #bbd9d5;
 }
 nav#primary h1 {
 	position: absolute;
@@ -303,18 +304,18 @@ nav.next-prev {
 		}
 	#bg3-2 {
 		position: absolute;
-		top: 805px;
-		left: -85px;
+		top: 811px;
+		left: -74px;
 		}
 	#bg3-3 {
 		position: absolute;
-		top: 1400px;
+		top: 1600px;
 		left: -85px;
 		}
 	#bg3-4 {
 		position: absolute;
-		top: 2110px;
-		left: -85px;
+		top: 2334px;
+		left: -83px;
 		}
 /* midground (clouds) */
 #parallax-bg2 {
@@ -338,16 +339,16 @@ nav.next-prev {
 	#bg2-3 {
 		position: absolute;
 		top: 723px;
-		left: 200px;
+		left: 150px;
 		}
 	#bg2-4 {
 		position: absolute;
 		top: 1180px;
-		left: 200px;
+		left: 750px;
 		}
 	#bg2-5 {
 		position: absolute;
-		top: 900px;
+		top: 700px;
 		left: 200px;
 		}
 /* background (clouds) */
@@ -371,8 +372,8 @@ nav.next-prev {
 		}
 	#bg1-3 {
 		position: absolute;
-		top: 900px;
-		left: 200px;
+		top: 510px;
+		left: 700px;
 		}
 	#bg1-4 {
 		position: absolute;
