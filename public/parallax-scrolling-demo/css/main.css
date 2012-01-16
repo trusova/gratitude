@@ -59,7 +59,7 @@ html {
 	overflow-y: scroll; /* always force a scrollbar in non-IE */
 	}
 body {
-	background: url('/images/gradient.png') repeat-x top  #cabfb1;
+	background: url('/images/bg_half_4bit.jpg') repeat top  #cabfb1;
 	overflow-x: hidden;
 	height: 4550px;
 	line-height: 1.5;
