@@ -23,12 +23,10 @@ height: 2em;
 
 div.dashboard {
   min-height: 800px;
-  /* dash_rainbow_test.png */
   background: url('/images/dashboard_FINAL.png') no-repeat top;
   margin-top: 45px;
   }
   
-  /* sun_bg.png,tri3.png, tri1.png */
     
   div.dashboard_reverse {
   min-height: 800px;
@@ -36,9 +34,7 @@ div.dashboard {
   position: relative;
   width: 100%;
   height: 100%;
-  background: transparent url('/images/cont_triangle_test.png') no-repeat center;
-  /*background: transparent url('/images/bottom_dashboard.png') no-repeat center;*/
-  
+  background: transparent url('/images/cont_triangle_test.png') no-repeat center;  
   }
   
    div.dashboard_reverse2 {
@@ -116,7 +112,6 @@ body, p, ol, ul, td {
  font-family: 'Corben', cursive;
   font-size:   16px;
   color: #666666;
-  /*line-height: 1.5em;*/
 }
 
 
