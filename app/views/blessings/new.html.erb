@@ -31,7 +31,7 @@
 
 <div class="share">
   <div class="share2">
-      <div style="width: 50px; float: left; margin-top: 3px; ">
+      <div style="width: 50px; float: left; margin-top: 4px; ">
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>" data-count="none"  data-hashtags="gratitude">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
@@ -43,19 +43,33 @@
 
 </div>
 
-<div class="hex">Day <%= days/3%></div>
+<div class="hex" id="<%= days/3%>">Day <%= days/3%></div>
 
 <p style="line-height: 0.8em;">&nbsp;</p>
 
 </div>
-
+   
  <% counter = 0 %>
 
     <% end %>
    
 <% end %>
 
-
+<nav id="primary">
+				<ul>
+                                  <% for i in 1..days/3 %>
+					<li>
+						<a class="manned-flight" href="#<%= i%>"><%= i%></a>
+					</li>
+                                        <% end %>
+                                        
+                                  <% for j in days/3+1..21 %>
+					<li>
+						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
+                                        </li>
+                                  <% end %>
+				</ul>
+			</nav>    
 
 </div>
     </div>

@@ -1,5 +1,6 @@
 body {
   background: url('/images/bg_half_4bit.jpg') repeat top #cabfb1;
+  /*background: url('/images/gradient_slice.png') repeat-x top #cabfb1;*/
   text-align: center;
 }
 
@@ -53,7 +54,7 @@ div.account_dashboard {
   }
 
 div.account {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   margin: auto;
   margin-top: 40px;
   position: relative;
@@ -65,18 +66,19 @@ div.account {
 }
 
 div.account#dashboard {
-  min-height: 450px;
+  min-height: 350px;
   width: 455px;
   padding: 5px;
   padding-left: 40px;
   margin-top: 70px;
+  padding-bottom: 20px;
   }
 
 div.account#terms {
   min-height: 450px;
-  width: 60%;
-  padding: 5px;
-  padding-left: 40px;
+  width:60%;
+  padding: 40px;
+  padding-top: 20px;
   }
   
   div.account#login {
@@ -159,7 +161,7 @@ div.grat_block {
 }
 
 div.text_block {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     width: 337px;
     padding: 15px;
     padding-bottom: 0px;
@@ -209,7 +211,7 @@ div.hex {
 
 
 div.entry {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   min-height: 380px;
   padding: 30px;
   width: 390px;
@@ -329,31 +331,43 @@ height: 28px;
   list-style: none;
 }
 
-div.light_wide_block {
-    background: rgba(203, 226, 219, 0.8);
-    min-height: 100px;
-    margin: 0px;
-    padding: 0px;
-        -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -khtml-border-radius: 20px;
-     border-radius: 10px;
+nav#primary {
+	z-index: 5;
+	position: fixed;
+	top: 20%;
+	right: 16px;
+	margin-top: -30px;
 }
 
-div.gratitudes {
-  text-align: left;
-  overflow: hidden;
-  position: relative;
-  margin: auto;
+nav#primary li {
+	position: relative;
+	height: 40px;
+}
+
+nav#primary ul {
+  list-style: none;       
+}
+
+nav#primary a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: transparent url('/images/tiny_hexa.png') 4px 4px no-repeat;
+	text-align: center;
+	text-indent: 3px;
+  line-height: 34px;
+  font-size: 16px;
+  padding: 5px 2px 0 0;
+  color: #55a3a0;
   font-family: 'Cabin Sketch', cursive;
-  float: right;
-     display: inline-block;  
-   vertical-align: middle; 
+  position: absolute;
+  bottom: 10px;
+  right: 2px;
+  text-decoration: none;
 }
 
-div.line {
-  background: url('/images/dotted_line.jpg') no-repeat;
-  margin-top: 40px;
-  margin-left: 47px;
-  height: 50px;
+nav#primary a:hover, nav#primary a.active{
+	background: transparent url('/images/on_hex_side_nav.png') 4px 5px no-repeat;
+	color: #bbd9d5;
+        text-decoration: none;
 }
