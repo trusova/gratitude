@@ -163,13 +163,16 @@ div.grat_block {
 }
 
 div.text_block {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     width: 340px;
     padding: 10px;
     padding-left: 70px;
     float: right;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+     border-radius: 10px;
 }
-
 
 ul.gmenu {
   list-style: none;
@@ -180,7 +183,6 @@ ul.gmenu {
   font-family: 'Cabin Sketch', cursive;
   color: #666666;
   font-size: 20px;
-  /*background: rgba(203, 226, 219, 0.5);*/
   margin: auto;
   position: relative;
   
