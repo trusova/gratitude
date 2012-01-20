@@ -79,7 +79,7 @@ div.dashboard {
   background: transparent url('/images/cont_triangle_test.png') no-repeat center;  
   }
   
-   div.dashboard_reverse2 {
+div.dashboard_reverse2 {
   min-height: 800px;
   margin-top: -50px;
   height: 100%;
@@ -278,9 +278,10 @@ a:hover { color: #FFFFFF;
 
 div.field, div.actions {
   margin-top: 130px;
-  z-index: 4;
+  z-index: 5;
   position: relative;
   padding-bottom: 0px;
+  margin-bottom: -90px;
 }
 
 form input[type="text"] {
