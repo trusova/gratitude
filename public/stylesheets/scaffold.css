@@ -281,7 +281,6 @@ div.field, div.actions {
   z-index: 5;
   position: relative;
   padding-bottom: 0px;
-  margin-bottom: -90px;
 }
 
 form input[type="text"] {
