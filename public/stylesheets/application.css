@@ -100,19 +100,46 @@ div.subnav {
   padding-bottom: 0;
 }
 
+p.info {
+ /* font-family: 'Cabin Sketch', cursive;*/
+  padding-left: 5px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
 
+div.heading {
+  float: left;
+  line-height: 1.5em;
+  padding-top: 0px;
+  text-align: left;
+  /*font-family: 'Cabin Sketch', cursive;*/
+  font-size: 16px;
+}
 
+p.tagline {
+  text-align: center;
+  padding-bottom: 15px;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 16px;
+}
+
+div.research {
+  background: url('/images/research_text3.png') center no-repeat;
+  min-height: 50px;
+  padding-bottom: 20px;
+}
 /* content */
 #content {
 	z-index: 4;
 	position: relative;
-	max-width: 1024px;
+	max-width: 420px;
 	padding: 0 10px;
 	margin: 0 auto;
 	line-height: 1.7;
 	}
 	#content article {
 		width: 300px;
+              
 		}
 		#manned-flight ,
 		#frameless-parachute,
@@ -121,8 +148,10 @@ div.subnav {
 			padding-top: 105px;
 			}
 		#manned-flight {
-			position: absolute;
 			top: 0px;
+                        position: absolute;
+                        margin: 0 auto;
+                              
 			}
 		#frameless-parachute {
 			position: absolute;
@@ -156,11 +185,12 @@ div.subnav {
 	#bg3-1 {
 		position: absolute;
 		top: 50px;
+                left: -30px;
 		}
 	#bg3-2 {
 		position: absolute;
-		top: 805px;
-		left: -85px;
+		top: 822px;
+		left: -30px;
 		}
 	#bg3-3 {
 		position: absolute;
@@ -169,42 +199,41 @@ div.subnav {
 		}
 	#bg3-4 {
 		position: absolute;
-		top: 2000px;
-		left: -85px;
+		top: 1700px;
+		left: -30px;
 		}
-/* midground (clouds) */
 #parallax-bg2 {
-	z-index: 3;
+	z-index: 2;
 	position: fixed;
 	left: 50%; /* align left edge with center of viewport */
 	top: 0;
 	width: 1200px;
-	margin-left: -600px; /* move left by half element's width */
+	margin-left: -635px; /* move left by half element's width */
 	}
 	#bg2-1 {
 		position: absolute;
-		top: 50px;
+		top: 133px;
 		left: 200px;
 		}
 	#bg2-2 {
 		position: absolute;
 		top: 300px;
-		left: 950px;
+		left: 200px;
 		}
 	#bg2-3 {
 		position: absolute;
-		top: 243px;
-		left: -35px;
+		top: 723px;
+		left: 150px;
 		}
 	#bg2-4 {
 		position: absolute;
-		top: 180px;
-		left: 250px;
+		top: 1180px;
+		left: 750px;
 		}
 	#bg2-5 {
 		position: absolute;
-		top: 300px;
-		left: 200px;
+		top: 1800px;
+		left: 150px;
 		}
 /* background (clouds) */
 #parallax-bg1 {
@@ -213,27 +242,32 @@ div.subnav {
 	left: 50%; /* align left edge with center of viewport */
 	top: 0;
 	width: 1200px;
-	margin-left: -600px; /* move left by half element's width */
+	margin-left: -630px; /* move left by half element's width */
 	}
 	#bg1-1 {
 		position: absolute;
-		top: 950px;
-		left: 100px;
+		top: 85px;
+		left: 180px;
 		}
 	#bg1-2 {
 		position: absolute;
 		top: 440px;
-		left: 795px;
+		left: 200px;
 		}
 	#bg1-3 {
 		position: absolute;
-		top: 900px;
-		left: -220px;
+		top: 510px;
+		left: 700px;
 		}
 	#bg1-4 {
 		position: absolute;
-		top: 1020px;
-		left: 450px;
+		top: 1100px;
+		left: 150px;
+		}
+        #bg1-5 {
+		position: absolute;
+		top: 950px;
+		left: 200px;
 		}
 
 

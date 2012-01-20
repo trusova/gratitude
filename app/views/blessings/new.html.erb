@@ -1,46 +1,56 @@
-<div class="dashboard">
-          
-<div class="main_content">
 
+<script language="javascript">
+document.getElementById("whole").style.height = "4550px";
+</script>
+
+<div class="main_content">
+<div id="wrapper">
+  
 <%= render 'form' %>
 
 <% if user_signed_in? %>
 
 <% if @blessings %>
-  
-<% counter = 0 %>
-<%   days = 0 %>
+		<div id="content">
+		<% counter = 0 %>
+<%   days = 0 %>      
+			<div>
+							<article id="manned-flight">
 
-<div>
-<% @blessings.each do |blessing| %>
-
+                          
+                                                            <% @blessings.each do |blessing| %>
 <% if counter == 0 %>
-<div class="grat_block">
+					<div class="grat_block">
 <div class="text_block">
+	
 <ul id="gratitude" class="gmenu">
-
-<% end %>
+	<% end %>
 
   <% counter += 1 %>
   <% days += 1 %>
 
-  <li><%= blessing.answer %></li>
-   
-    
+	<li><span style="visibility: visible;" id="num"><%=counter%>.</span> <%= blessing.answer %></li>   
   <% if counter == 3 %>
+<script language="javascript">
+spans = document.getElementsByTagName("span");
 
+for (i=0;i<spans.length;i++)
+{
+spans[i].style.visibility = 'hidden';
+}
+</script>
 <div class="share">
   <div class="share2">
-      <div style="width: 50px; float: left; margin-top: 4px; ">
+      <div style="width: 50px; float: left; margin-top: 6px; ">
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>#<%= days/3%>" data-count="none"  data-hashtags="gratitude">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
-      
-   <div style="width: 75px;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>#<%= days/3%>" data-width="70" data-show-faces="false"></div>
+    </div>  
+   <div id="<%= days/3%>" style="width: 75px;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>#<%= days/3%>" data-width="70" data-show-faces="false">
+   </div>
 </div>
 </div>
-  </ul>
 
+  </ul>
 </div>
 
 <div class="hex" id="<%= days/3%>">Day <%= days/3%></div>
@@ -53,58 +63,61 @@
 
     <% end %>
    
-<% end %>
-
-<nav id="primary">
+			
+				
+                                <% end %>
+				</article></div>
+                                                        <nav id="primary">
 				<ul>
                                   <% for i in 1..days/3 %>
 					<li>
-						<a class="manned-flight" href="#<%= i%>"><%= i%></a>
+						<a  href="#<%= i%>"><%= i%></a>
 					</li>
                                         <% end %>
                                         
                                   <% for j in days/3+1..21 %>
-					<!--<li>
+					<li>
 						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
-                                        </li>-->
+                                        </li>
                                   <% end %>
 				</ul>
 			</nav>    
-
-</div>
-    </div>
-
-    </div>
-  <!--<div class="dashboard_reverse"></div>-->
-  
-
-  <% end %>
-  
-      
-  <% end %>
-
-      </div>
-
-    </div>
-
-       <!--<div class="dashboard_reverse2"></div>-->
-       	   <!--<div id="content">
-			
-			
-		
-                        <div id="parallax-bg2">
-				<img id="bg2-5" src="/images/lite_blue_hexa.png" alt="cloud"/>
+				<article id="frameless-parachute">
+					
+				</article>
 				
-			
-			
+				<article id="english-channel">
+					
+				</article>
+				
+				<article id="about">
+					
 			</div>
 			
+			<!-- Parallax foreground -->
+			<div id="parallax-bg3">
+				
+				<img id="bg3-1" src="/images/dashboard_FINAL.png" width="1000" alt="Traingle"/>
+				<img id="bg3-2" src="/images/cont_triangle_test.png" width="1000" alt="Triangle"/>
+				<img id="bg3-4" src="/images/lite_blue_hexa2.png" width="980" alt="Triangle"/>
+			</div>
 			
+			<!-- Parallax  midground clouds -->
+			<div id="parallax-bg2">
+				<img id="bg2-3" src="/images/clouds.png" alt="cloud"/>
+				<img id="bg2-4" src="/images/clouds_small.png" alt="cloud"/>
+                                <img id="bg2-5" src="/images/clouds_trees.png" alt="cloud"/>
+			</div>
+			
+			<!-- Parallax  background clouds -->
 			<div id="parallax-bg1">
-		      
-				
+				<img id="bg1-2" src="/images/hexagons_2.png" alt="cloud"/>
+				<img id="bg1-3" src="/images/hexagons_2_flip.png" alt="cloud" />
+                                <img id="bg1-5" src="/images/mt_bottom.png" alt="trees"/>
 			</div>
-                        
-    
-    </div>-->
-    
+		
+		
+	<% end %>
+        <% end %>
+        </div>
+  </div>

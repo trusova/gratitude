@@ -1,0 +1,110 @@
+<div class="dashboard">
+          
+<div class="main_content">
+
+<%= render 'form' %>
+
+<% if user_signed_in? %>
+
+<% if @blessings %>
+  
+<% counter = 0 %>
+<%   days = 0 %>
+
+<div>
+<% @blessings.each do |blessing| %>
+
+<% if counter == 0 %>
+<div class="grat_block">
+<div class="text_block">
+<ul id="gratitude" class="gmenu">
+
+<% end %>
+
+  <% counter += 1 %>
+  <% days += 1 %>
+
+  <li><%= blessing.answer %></li>
+   
+    
+  <% if counter == 3 %>
+
+<div class="share">
+  <div class="share2">
+      <div style="width: 50px; float: left; margin-top: 4px; ">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>#<%= days/3%>" data-count="none"  data-hashtags="gratitude">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+      
+   <div style="width: 75px;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>#<%= days/3%>" data-width="70" data-show-faces="false"></div>
+</div>
+</div>
+  </ul>
+
+</div>
+
+<div class="hex" id="<%= days/3%>">Day <%= days/3%></div>
+
+<p style="line-height: 0.8em;">&nbsp;</p>
+
+</div>
+   
+ <% counter = 0 %>
+
+    <% end %>
+   
+<% end %>
+
+<nav id="primary">
+				<ul>
+                                  <% for i in 1..days/3 %>
+					<li>
+						<a class="manned-flight" href="#<%= i%>"><%= i%></a>
+					</li>
+                                        <% end %>
+                                        
+                                  <% for j in days/3+1..21 %>
+					<!--<li>
+						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
+                                        </li>-->
+                                  <% end %>
+				</ul>
+			</nav>    
+
+</div>
+    </div>
+
+    </div>
+  <!--<div class="dashboard_reverse"></div>-->
+  
+
+  <% end %>
+  
+      
+  <% end %>
+
+      </div>
+
+    </div>
+
+       <!--<div class="dashboard_reverse2"></div>-->
+       	   <!--<div id="content">
+			
+			
+		
+                        <div id="parallax-bg2">
+				<img id="bg2-5" src="/images/lite_blue_hexa.png" alt="cloud"/>
+				
+			
+			
+			</div>
+			
+			
+			<div id="parallax-bg1">
+		      
+				
+			</div>
+                        
+    
+    </div>-->
+    

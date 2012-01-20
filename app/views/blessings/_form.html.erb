@@ -1,73 +1,62 @@
 <% if user_signed_in? %>
 <%= form_for(@blessing) do |f| %>
   <% if @blessing.errors.any? %>
-    <!--<div id="error_explanation">
-      <ul>
-      <% @blessing.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>-->   
   <% end %>
   <div class="field" >
     <div class="question"></div>
     <%= f.text_field :answer %>
   </div>
-  <!--<div class="actions">
-    <%= f.submit %>
-  </div>-->
 
 <% end %>
-<% else %>
+<% else if params[:name].nil? %>
+<div class="dashboard">
+  <div class="main_content">
+    <script language="javascript">
+document.getElementById("whole").style.height = "800px";
+</script>
+    <% else %>
+   <script language="javascript">
+document.getElementById("whole").style.height = "4550px";
+</script>
+<% end %>
 <form action="/users/sign_in">
   
 <div class="field">
   <div class="question"></div>
-  <!--<div class="info"></div>-->
-  <!--<input size="30" type="text" id="blessing_answer" name="blessing[answer]" />-->
-</div>
-<!--
-<div class="grat_block">
-  
-<div class="text_block">
-<ul class="gmenu" id="gratitudes">
-  <li>Persimmons from the farmer's market</li>
-  <li>My family</li>
-  <li>Awesome red shoes from Fluwog</li>
-</ul>
 </div>
 
- <div class="hex"></div>
- 
-</div>
-
-<div style="height: 40px;"></div>-->
 <% if params[:name].nil? %>
-<div class="entry">
+<div  class="entry">
+<div class="heading">
+<p class="tagline">
+<b>Research shows that recording 3 gratitudes a day for 3 weeks can make you happier and healthier</b>
+</p>
+<div style="padding-left: 10%;">
 <div style="float:left; width: 90px;">
 <a href="/users/sign_up"><img src="/images/sign_up_gr.png" />
 </div>
-<div style="float: left; width: 90px;">
+<div style="float: left; width: 85px;">
 <a href="/users/sign_in"><img src="/images/login_gr.png" />
 </div>
-<div style="float: left; width: 10px; padding-left: 5px;">
-<img src="/images/or.png" />
+<div style="float: left; width: 5px; padding-left: 5px;">
+<img src="/images/dash2.png" height="25px;" />
 </div>
-<div style="width: 100px; float: right; margin-top: 1px; padding-right: 15px; clear: right;">
+
+<div style="width: 130px; float: right; margin-top: 1px; padding-right: 15px; clear: right;">
 <a href="/auth/facebook"><img src="/images/fb_connect.gif" alt="fb connect"></a>
 </div>
-<div style="float: left; line-height: 1.5em; padding-top: 10px; text-align: left; font-family: 'Cabin Sketch', cursive;">
-<p style="text-align: center; padding-bottom: 20px; font-family: 'Cabin Sketch', cursive;"><b>Research shows that recording 3 gratitudes a day for 3 weeks will make you happier and healthier</b>
-</p>
-<p style="font-family: 'Cabin Sketch', cursive; padding-left: 5px; padding-bottom: 10px;">
+</div>
+<br/>
+<br/>
+<p class="info">
   <b>Health: </b> According to leading <a href="http://psychology.ucdavis.edu/Labs/emmons/PWT/index.cfm?Section=4" target="_blank">gratitude</a>
 and <a href="http://www.faculty.ucr.edu/~sonja/" target="_blank">happiness</a> researchers, keeping a gratitude journal can result in better sleep and more energy, increasing overall well-being and health.
 </p>
-<p style="font-family: 'Cabin Sketch', cursive; padding-left: 5px; padding-bottom: 10px;">
+<p class="info">
 <b>Happiness: </b>People who regularly practice grateful thinking can increase their set point of happiness by as much as 25 percent.
 </p>
 
-<p style="font-family: 'Cabin Sketch', cursive; padding-left: 5px;">
+<p class="info">
 <b>Healing: </b>Gratitude art is inspired by mandala-like grids created by a <a href="http://www.emma-kunz-zentrum.ch/e/index_e.html?#emma/" target="_blank">visionary artist</a> and researcher as instruments of healing.
 </p>
 </div>
@@ -76,7 +65,10 @@ and <a href="http://www.faculty.ucr.edu/~sonja/" target="_blank">happiness</a> r
 <% end %>
 
 </form>
-
+<% if params[:name].nil? %>
+  </div>
+</div>
+<% end %>
 <% end %>
   
 
