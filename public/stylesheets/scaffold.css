@@ -214,6 +214,18 @@ div.text_block {
      border-radius: 10px;
 }
 
+
+div.ex_block {
+    width: 315px;
+    padding: 15px;
+    padding-bottom: 5px;
+    padding-left: 90px;
+    float: right;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+     border-radius: 10px;
+}
   
 div.share {
   width: 405px;
