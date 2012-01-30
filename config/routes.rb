@@ -23,8 +23,8 @@ get '/logout', :to => 'sessions#destroy'
  #match '/' => 'sites#show', :constraints => { :subdomain => /.+/ }
 
  #root :to => "home#index"
- match 'users/:name' => 'blessings#index'
- match 'sharedby/:name' => 'blessings#index'
+ #match 'users/:name' => 'blessings#index'
+ #match 'sharedby/:name' => 'blessings#index'
  match 'community' => 'blessings#show'
  match 'users' => 'blessings#new'
  match 'share/:day' => 'blessings#share'
