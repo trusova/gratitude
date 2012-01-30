@@ -22,7 +22,7 @@ class BlessingsController < ApplicationController
   # GET /blessings/1.xml
   def show
         @blessing = Blessing.new
-    @blessings = Blessing.find(:all, :conditions => ["share = 1"], :order => 'created_at DESC')
+    @blessings = Blessing.find(:all, :conditions => ["share = true"], :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # show.html.erb
