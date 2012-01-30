@@ -1,3 +1,69 @@
+div.star {
+  padding-top: 0px;
+  padding-left: 15px;
+  float: left;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+
+nav#feature {
+	z-index: 5;
+        top: -102px;
+	position: relative;
+	right: -350px;
+}
+
+div#feature h1 {
+	position: absolute;
+	right: 25px;
+	top: -50px;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+        min-height: 150px;
+        min-width: 250px;
+	background: transparent url('/images/whitetab.png') 100% 50% no-repeat;
+	}
+
+div#feature h1.example {
+	position: absolute;
+	right: 20px;
+	top: -35px;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+        min-height: 150px;
+        min-width: 250px;
+	background: transparent url('/images/whitetab.png') 100% 50% no-repeat;
+	}
+
+
+div.star a.star_false {
+    background: url('/images/star_on_off.png') no-repeat 0 -23px;
+    display: block;
+    text-decoration: none;
+    width: 25px;
+    height: 23px;
+}
+
+div.star a.star_false:hover {
+    background: url('/images/star_on_off.png') no-repeat 0 0;
+}
+
+div.star a.star_true:hover {
+    background: url('/images/star_on_off.png') no-repeat 0 -23px;
+}
+
+div.star a.star_true {
+  background: url('/images/star_on_off.png') no-repeat 0 0;
+  text-decoration: none;
+  display: block;
+  width: 25px;
+  height: 23px;
+  }
+
 ul.hmenu {
   list-style: none;
   text-align: right;
@@ -128,6 +194,7 @@ div.research {
   min-height: 50px;
   padding-bottom: 20px;
 }
+        
 /* content */
 #content {
 	z-index: 4;
@@ -163,11 +230,10 @@ div.research {
 			top: 2180px;
 			}
 			#content h1 {
-				margin: 0 0 25px 0;
-				font-size: 60px;
-				font-family: Georgia, serif;
+				margin: 0 45px 45px 0;
+				font-size: 12px;
 				font-weight: normal;
-				line-height: 65px;
+				line-height: 15px;
 				}
 		#about {
 			position: absolute;

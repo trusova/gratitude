@@ -43,11 +43,11 @@ document.getElementById("whole").style.height = "2500px";
 
 </div>
 <div class="hex" id="ex" style="padding-top: 30px;">Day 1
-   <div id="ex" style="width: 55px; padding-left: 10px; padding-top: 0px; float: left;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>" data-width="70" data-show-faces="false">
-   </div>
-    <div style="padding-left: 6px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>" data-count="none"  data-hashtags="gratitude">Tweet</a></div>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                    
-                                        
+<div id="feature"><h1 id="example"></h1></div>
+   <div class="star">
+    <a href="/community" class="star_true"></a>
+</div>
+                                    
 </div>
 </div>
   </div>
@@ -65,7 +65,7 @@ document.getElementById("whole").style.height = "2500px";
                           
                                                             <% @blessings.each do |blessing| %>
 <% if counter == 0 %>
-					<div class="grat_block">
+					<div class="grat_block" id="<%= blessing.day%>">
 <div class="text_block">
 	
 <ul id="gratitude" class="gmenu" style="list-style-position: outside;">
@@ -73,10 +73,14 @@ document.getElementById("whole").style.height = "2500px";
 
   <% counter += 1 %>
   <% days += 1 %>
-
+     <script language="javascript">
+            var days = <%= days/3 %> + 1;
+                                    document.getElementById("blessing_day").value = days;
+                                  </script>
 	<li style="list-style-position:outside;"><span style="visibility: visible; padding: 0px; line-height: 1em;" id="num"><%=counter%>.</span> <%= blessing.answer %></li>   
   <% if counter == 3 %>
 <script language="javascript">
+
 spans = document.getElementsByTagName("span");
 
 for (i=0;i<spans.length;i++)
@@ -87,16 +91,13 @@ for (i=0;i<spans.length;i++)
   </ul>
 </div>
 
-<div class="hex" id="<%= days/3%>">Day <%= days/3%>
-   <div id="<%= days/3%>" style="width: 55px; padding-left: 10px; padding-top: 0px; float: left;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>#<%= days/3%>" data-width="70" data-show-faces="false">
-   </div>
-    <div style="padding-left: 6px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/sharedby/<%=current_user.cached_slug%>#<%= days/3%>" data-count="none"  data-hashtags="gratitude">Tweet</a></div>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                    
-                                        
-                                       <!-- <div id="custom-tweet-button">
-  <a href="https://twitter.com/share?url=http%3A%2F%2Fgratitude.is%2Fsharedby%2F<%=current_user.cached_slug%>%23<%= days/3%>&text=Gratitude&hashtags=gratitude"
-  onclick="window.open('https://twitter.com/share?url=http%3A%2F%2Fgratitude.is%2Fsharedby%2F<%=current_user.cached_slug%>%23<%= days/3%>&text=Gratitude&hashtags=gratitude','window','width=640,height=480'); return false;" target="_blank">&nbsp;</a>
-</div>-->
+<div class="hex">Day <%= blessing.day%>
+<div id="feature"><h1></h1></div>
+     <div class="star">
+    <a href="/share/<%= blessing.day%>" class="star_<%= blessing.share%>"></a>
+</div>
+     
+      
 </div>
 
 <p style="line-height: 0.8em;">&nbsp;</p>
@@ -105,27 +106,10 @@ for (i=0;i<spans.length;i++)
    
  <% counter = 0 %>
 
-    <% end %>
-   
-			
-				
-                                <% end %>
+    <% end %>				
+                              <% end %>
 				</article></div>
-                                                        <nav id="primary">
-				<ul>
-                                  <% for i in 1..days/3 %>
-					<li>
-						<a  href="#<%= i%>"><%= i%></a>
-					</li>
-                                        <% end %>
-                                        
-                                  <% for j in days/3+1..21 %>
-					<!--<li>
-						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
-                                        </li>-->
-                                  <% end %>
-				</ul>
-			</nav>    
+                                       
 				<article id="frameless-parachute">
 					
 				</article>
@@ -134,15 +118,38 @@ for (i=0;i<spans.length;i++)
 					
 				</article>
 				
-				<article id="about">
-					
+				<article id="about"></article>
+				 <nav id="primary">
+				<ul>
+                                  <% for i in 1..days/3 %>
+					<li>
+                                          <% if i == 7 %>
+                                          <h1>Week 1</h1>
+                                          <% end %>
+                                          <% if i == 14 %>
+                                          <h1>Week 2</h1>
+                                          <% end %>
+                                          <% if i == 21 %>
+                                          <h1>Week 3</h1>
+                                          <% end %>
+						<a  href="#<%= i%>"><%= i%></a>
+					</li>
+                                        <% end %>
+                                        
+                                  <% for j in days/3+1..21 %>
+					<li>
+						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
+                                        </li>
+                                  <% end %>
+				</ul>
+			</nav>                
 			</div>
-			
+	  
 			<!-- Parallax foreground -->
 			<div id="parallax-bg3">
 				
 				<img id="bg3-1" src="/images/dashboard_FINAL.png" width="1000" alt="Traingle"/>
-				<img id="bg3-2" src="/images/bottom_dashboard.png" width="1000" alt="Triangle"/>
+				<img id="bg3-2" src="/images/bottom_dashboard3.png" width="1000" alt="Triangle"/>
 				<!--<img id="bg3-4" src="/images/lite_blue_hexa2.png" width="980" alt="Triangle"/>-->
 			</div>
 			

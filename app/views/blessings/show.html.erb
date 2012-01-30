@@ -1,9 +1,103 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>What are you grateful for?</b>
-  <%= @blessing.answer %>
-</p>
+<script language="javascript">
+document.getElementById("whole").style.height = "2550px";
+</script>
 
-<%= link_to 'Edit', edit_blessing_path(@blessing) %> |
-<%= link_to 'Back', blessings_path %>
+<style type="text/css">
+    body 
+    { 
+         background: url('/images/bg_community.png') repeat top #cabfb1;
+
+    }
+ </style>
+<div class="main_content">
+<div id="wrapper">
+
+<% if @blessings %>
+		<div id="content">
+		<% counter = 0 %>
+<%   days = 0 %>      
+			<div style="margin-top: 215px;">
+							<article id="manned-flight">
+
+                          
+                                                            <% @blessings.each do |blessing| %>
+<% if counter == 0 %>
+					<div class="grat_block">
+<div class="text_block">
+	
+<ul id="gratitude" class="gmenu" style="list-style-position: outside;">
+	<% end %>
+
+  <% counter += 1 %>
+  <% days += 1 %>
+
+	<li style="list-style-position:outside;"><span style="visibility: visible; padding: 0px; line-height: 1em;" id="num"><%=counter%>.</span> <%= blessing.answer %></li>   
+  <% if counter == 3 %>
+<script language="javascript">
+spans = document.getElementsByTagName("span");
+
+for (i=0;i<spans.length;i++)
+{
+//spans[i].style.visibility = 'hidden';
+}
+</script>
+  </ul>
+</div>
+
+<div class="hex" id="<%= blessing.day%>">Day <%= blessing.day%>
+   <div id="<%= blessing.day%>" style="width: 55px; padding-left: 10px; padding-top: 0px; float: left;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/community" data-width="70" data-show-faces="false">
+   </div>
+    <div style="padding-left: 6px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/community" data-count="none"  data-hashtags="gratitude">Tweet</a></div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                    
+</div>
+
+<p style="line-height: 0.8em;">&nbsp;</p>
+
+</div>
+   
+ <% counter = 0 %>
+
+    <% end %>
+   
+			
+				
+                                <% end %>
+				</article></div>
+				<article id="frameless-parachute">
+					
+				</article>
+				
+				<article id="english-channel">
+					
+				</article>
+				
+				<article id="about">
+					
+			</div>
+			
+			<!-- Parallax foreground -->
+			<div id="parallax-bg3">
+				
+				<img id="bg3-1" src="/images/community.png" width="1000" alt="Traingle"/>
+				<img id="bg3-2" src="/images/bottomdash_community.png" width="1000" alt="Triangle"/>
+				<!--<img id="bg3-4" src="/images/lite_blue_hexa2.png" width="980" alt="Triangle"/>-->
+			</div>
+			
+			<!-- Parallax  midground clouds -->
+			<div id="parallax-bg2">
+				<img id="bg2-3" src="/images/clouds.png" alt="cloud"/>
+				<img id="bg2-4" src="/images/clouds_small.png" alt="cloud"/>
+                               <!-- <img id="bg2-5" src="/images/clouds_trees.png" alt="cloud"/>-->
+			</div>
+			
+			<!-- Parallax  background clouds -->
+			<div id="parallax-bg1">
+				<img id="bg1-2" src="/images/hexagons_2.png" alt="cloud"/>
+				<img id="bg1-3" src="/images/hexagons_2_flip.png" alt="cloud" />
+                                <!--<img id="bg1-5" src="/images/mt_bottom.png" alt="trees"/>-->
+			</div>
+
+          <% end %>
+        </div>
+  </div>

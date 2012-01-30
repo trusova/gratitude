@@ -21,7 +21,8 @@ class BlessingsController < ApplicationController
   # GET /blessings/1
   # GET /blessings/1.xml
   def show
-    #@blessing = Blessing.all
+        @blessing = Blessing.new
+    @blessings = Blessing.find(:all, :conditions => ["share = 1"], :order => 'created_at DESC')
 
     respond_to do |format|
       format.html # show.html.erb
@@ -33,11 +34,10 @@ class BlessingsController < ApplicationController
   # GET /blessings/new.xml
   def new
     if user_signed_in?
-  #Notifier.daily_email(current_user.email).deliver
 
     @blessing = Blessing.new
     #@blessings = Blessing.find(:all, :order => 'created_at DESC', :conditions => ["user_id = ?", current_user.id])
-    @blessings = Blessing.find(:all, :conditions => ["user_id = ?", current_user.id])
+    @blessings = Blessing.find(:all, :order => 'day DESC, created_at', :conditions => ["user_id = ?", current_user.id])
     
     
     respond_to do |format|
@@ -93,6 +93,21 @@ class BlessingsController < ApplicationController
       end
     end
   end
+
+def share
+    @blessings = Blessing.find(:all, :conditions => ["user_id = ? and day = ?", current_user.id, params[:day]])
+ if @blessings 
+  @blessings.each do |blessing|
+      if blessing.share
+          blessing.update_attributes(:share => false)
+      else
+          blessing.update_attributes(:share => true)
+      end
+    
+    end
+ end
+ redirect_to("/community")
+ end
 
   # DELETE /blessings/1
   # DELETE /blessings/1.xml

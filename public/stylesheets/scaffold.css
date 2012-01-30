@@ -390,10 +390,9 @@ height: 28px;
 
 nav#primary {
 	z-index: 5;
-	position: fixed;
-	top: 20%;
-	right: 16px;
-	margin-top: -50px;
+        top: -102px;
+	position: relative;
+	right: -400px;
 }
 
 nav#primary li {
@@ -428,3 +427,15 @@ nav#primary a:hover, nav#primary a.active{
 	color: #bbd9d5;
         text-decoration: none;
 }
+
+
+nav#primary h1 {
+	position: absolute;
+	right: 1px;
+	top: -7px;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url('/images/days_tab.png') 100% 50% no-repeat;
+	}
+        

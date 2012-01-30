@@ -21,7 +21,19 @@
   <%= csrf_meta_tag %>
 </head>
 
-<body id="whole" onload="document.getElementById('blessing_answer').focus()">
+<script language="javascript">
+function answer(){
+  //document.getElementById('blessing_answer').focus();
+  document.getElementById('blessing_answer').value = 'Enter one at a time and hit return (ex: soup)';
+  document.getElementById('blessing_answer').style.color = '#cccccc';
+  document.getElementById('blessing_answer').onclick = function erase(){
+    document.getElementById('blessing_answer').value = '';
+     document.getElementById('blessing_answer').style.color = '#666666';
+  }
+}
+</script>
+
+<body id="whole" onload="javascript:answer();">
 
 <!--<div class="wrapper">-->
   <div id="fb-root"></div>

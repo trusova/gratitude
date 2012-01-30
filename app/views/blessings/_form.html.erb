@@ -3,8 +3,14 @@
   <% if @blessing.errors.any? %>
   <% end %>
   <div class="field" >
+      <% if params[:name].nil? %>
     <div class="question"></div>
-    <%= f.text_field :answer %>
+    <%= f.text_field :answer%>
+    <%= f.hidden_field :day%>
+    <% else %>
+    
+    <div><br/><br/><br/></div>
+    <% end %>
   </div>
 
 <% end %>
