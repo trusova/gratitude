@@ -433,9 +433,12 @@ nav#primary h1 {
 	position: absolute;
 	right: 1px;
 	top: -7px;
-	padding: 4px 20px 4px 7px;;
+	padding: 4px 25px 4px 7px;;
 	color: #fff;
 	white-space: nowrap;
+        text-align: right;
 	background: transparent url('/images/days_tab.png') 100% 50% no-repeat;
+        width: 100px;
+        font-size: 14px;
 	}
         
