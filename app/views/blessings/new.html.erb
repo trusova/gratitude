@@ -23,27 +23,20 @@ document.getElementById("whole").style.height = "2500px";
 <% if @blessings.empty? %>
 <div id="content" style="padding-top: 100px; max-width: 440px;">
   
-   <div class="entry" style="min-height: 235px;">
-  <p class="tagline">
-<b>Research shows that recording 3 gratitudes a day for 3 weeks can make you happier and healthier</b>
-  </p>  
-  <ul id="gratitude" class="gmenu" style="float: left; padding-top: 0px; ">
-    <li>Example:</li>
-  </ul>
+   <div class="entry" style="min-height: 145px; padding: 20px;">
+    <span style="color: #a49d96; padding: 0px; line-height: 1em; padding: 0px;"><h3>Example</h3></span><br/>
 
-<div class="grat_block">
+<div class="grat_block" style="margin-top: -20px;">
 <div class="ex_block">
-
 <ul id="gratitude" class="gmenu" style="list-style-position: outside;">
-
   <li>1. Walking around Bernal hill in the morning</li>
   <li>2. Persimmon pudding my mom makes</li>
   <li>3. My bike</li>
 </ul>
 
 </div>
-<div class="hex" id="ex" style="padding-top: 30px;">Day 1
-<div id="feature"><h1 class="example"></h1></div>
+<div class="hex" id="ex" style="padding-top: 7px;">
+Day 1
    <div class="star">
     <a href="/community" class="star_true"></a>
 </div>
@@ -92,7 +85,6 @@ for (i=0;i<spans.length;i++)
 </div>
 
 <div class="hex">Day <%= blessing.day%>
-<div id="feature"><h1></h1></div>
      <div class="star">
     <a href="/share/<%= blessing.day%>" class="star_<%= blessing.share%>"></a>
 </div>
@@ -101,15 +93,15 @@ for (i=0;i<spans.length;i++)
 </div>
 
 <p style="line-height: 0.8em;">&nbsp;</p>
+                                     <div id="feature"><h1></h1></div>     
 
 </div>
-   
+
  <% counter = 0 %>
 
     <% end %>				
                               <% end %>
 				</article></div>
-                                       
 				<article id="frameless-parachute">
 					
 				</article>
@@ -118,7 +110,10 @@ for (i=0;i<spans.length;i++)
 					
 				</article>
 				
-				<article id="about"></article>
+				<article id="about">
+                                  
+                                </article>
+                                <% if days > 0 %>
 				 <nav id="primary">
 				<ul>
                                   <% for i in 1..days/3 %>
@@ -142,7 +137,8 @@ for (i=0;i<spans.length;i++)
                                         </li>
                                   <% end %>
 				</ul>
-			</nav>                
+                                 </nav>
+                                 <% end %>
 			</div>
 	  
 			<!-- Parallax foreground -->

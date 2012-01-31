@@ -17,26 +17,26 @@ nav#feature {
 
 div#feature h1 {
 	position: absolute;
-	right: 25px;
-	top: -50px;
+	right: 255px;
+	top: 50px;
 	padding: 4px 20px 4px 7px;;
 	color: #fff;
 	white-space: nowrap;
         min-height: 150px;
         min-width: 250px;
-	background: transparent url('/images/whitetab.png') 100% 50% no-repeat;
+	background: url('/images/whitetab.png') 100% 50% no-repeat;
 	}
 
 div#feature h1.example {
 	position: absolute;
 	right: 55px;
-	top: -35px;
+	top: -55px;
 	padding: 4px 20px 4px 7px;;
 	color: #fff;
 	white-space: nowrap;
         min-height: 150px;
         min-width: 250px;
-	background: transparent url('/images/whitetab.png') 100% 50% no-repeat;
+	background: url('/images/whitetab.png') 100% 50% no-repeat;
 	}
 
 
