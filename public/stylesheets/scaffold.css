@@ -390,7 +390,7 @@ height: 28px;
 
 nav#primary {
 	z-index: 5;
-        top: -102px;
+        top: 75px;
 	position: relative;
 	right: -400px;
 }

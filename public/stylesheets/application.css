@@ -7,6 +7,12 @@ div.star {
   height: 50px;
 }
 
+a#community {
+  color: #666666;
+}
+a#community:hover, a#community:visited {
+  color: #74a8cd;
+}
 
 nav#feature {
 	z-index: 5;
@@ -18,25 +24,25 @@ nav#feature {
 div#feature h1 {
 	position: absolute;
 	right: 255px;
-	top: 50px;
+	top: 52px;
 	padding: 4px 20px 4px 7px;;
 	color: #fff;
 	white-space: nowrap;
         min-height: 150px;
         min-width: 250px;
-	background: url('/images/whitetab2.png') 100% 50% no-repeat;
+	background: url('/images/whitetab3.png') 100% 50% no-repeat;
 	}
 
 div#greeting h1 {
 	position: absolute;
 	right: 255px;
-	top: 50px;
+	top: 45px;
 	padding: 4px 20px 4px 7px;;
 	color: #fff;
 	white-space: nowrap;
         min-height: 150px;
         min-width: 350px;
-	background: url('/images/community_greeting.png') 100% 50% no-repeat;
+	background: url('/images/whitetab_community.png') 100% 50% no-repeat;
 	}
 
 div#feature h1.example {
@@ -47,7 +53,7 @@ div#feature h1.example {
 	white-space: nowrap;
         min-height: 150px;
         min-width: 250px;
-	background: url('/images/whitetab2.png') 100% 50% no-repeat;
+	background: url('/images/whitetab3.png') 100% 50% no-repeat;
 	}
 
 
