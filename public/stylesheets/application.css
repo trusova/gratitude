@@ -7,10 +7,8 @@ div.star {
   height: 50px;
 }
 
-a#community {
-  color: #666666;
-}
-a#community:hover, a#community:visited {
+
+a#community:hover{
   color: #74a8cd;
 }
 
@@ -350,8 +348,13 @@ div.research {
 		}
         #bg1-5 {
 		position: absolute;
-		top: 950px;
-		left: 200px;
+		top: 675px;
+		left: 150px;
+		}
+          #bg1-6 {
+		position: absolute;
+		top: 686px;
+		left: 150px;
 		}
 
 
