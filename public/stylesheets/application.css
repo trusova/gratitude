@@ -24,7 +24,7 @@ div#feature h1 {
 	white-space: nowrap;
         min-height: 150px;
         min-width: 250px;
-	background: url('/images/whitetab.png') 100% 50% no-repeat;
+	background: url('/images/star_box_tupe.png') 100% 50% no-repeat;
 	}
 
 div#feature h1.example {
@@ -32,11 +32,10 @@ div#feature h1.example {
 	right: 55px;
 	top: -55px;
 	padding: 4px 20px 4px 7px;;
-	color: #fff;
 	white-space: nowrap;
         min-height: 150px;
         min-width: 250px;
-	background: url('/images/whitetab.png') 100% 50% no-repeat;
+	background: url('/images/star_box_tupe.png') 100% 50% no-repeat;
 	}
 
 
