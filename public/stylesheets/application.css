@@ -365,4 +365,43 @@ div.research {
 		}
 
 
+#bg4 {
+	z-index: 1;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 1200px;
+	margin-left: -730px; /* move left by half element's width */
+	}
+	#bg4-1 {
+		position: absolute;
+		top: 50px;
+		left: 140px;
+		}
+	#bg4-2 {
+		position: absolute;
+		top: 235px;
+		left: 200px;
+		}
+	#bg4-3 {
+		position: absolute;
+		top: 50px;
+		left: 950px;
+		}
+	#bg4-4 {
+		position: absolute;
+		top: 420px;
+		left: 140px;
+		}
+        #bg4-5 {
+		position: absolute;
+		top: 375px;
+		left: 1100px;
+		}
+          #bg4-6 {
+		position: absolute;
+		top: 686px;
+		left: 150px;
+		}
+
 
