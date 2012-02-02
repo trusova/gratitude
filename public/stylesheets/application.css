@@ -34,6 +34,25 @@ div#feature h1 {
 	background: url('/images/whitetab3.png') 100% 50% no-repeat;
 	}
 
+nav#research_info {
+	z-index: 5;
+        top: -102px;
+	position: relative;
+	right: -350px;
+}
+
+div#research_info h1 {
+	position: absolute;
+	right: 400px;
+	top: 90px;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+        min-height: 150px;
+        min-width: 250px;
+	background: url('/images/reasearchtab.png') 100% 50% no-repeat;
+	}
+
 div#greeting h1 {
 	position: absolute;
 	right: 255px;
