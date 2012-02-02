@@ -49,7 +49,7 @@ config.action_mailer.smtp_settings = {
   :address => 'smtp.gmail.com',
   :port => 587,
   :user_name => 'info@gratitude.is',
-  :password => 'toolsforhappy',
+  :password => 'happiness123',
   :authentication => 'login',
   :enable_starttls_auto => true
 }
