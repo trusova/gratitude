@@ -65,12 +65,13 @@ height: 2em;
 
 div.dashboard {
   min-height: 800px;
-  background: url('/images/top_dash.png') no-repeat top;
+  /* top_dash.png */
+  background: url('/images/final_top_dash_hex_cut.png') no-repeat top;
   margin-top: 45px;
   }
   
     
-  div.dashboard_reverse {
+div.dashboard_reverse {
   min-height: 800px;
   margin-top: -14px;
   position: relative;
@@ -207,6 +208,7 @@ div.text_block {
     padding: 15px;
     padding-bottom: 5px;
     padding-left: 90px;
+    min-height:90px;
     float: right;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
