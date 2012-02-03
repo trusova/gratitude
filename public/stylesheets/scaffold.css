@@ -218,10 +218,10 @@ div.text_block {
 
 
 div.ex_block {
-    width: 315px;
-    padding: 15px;
+    width: 320px;
+    padding: 5px;
     padding-bottom: 5px;
-    padding-left: 90px;
+    padding-left: 50px;
     float: right;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;

@@ -1,4 +1,5 @@
 <% if user_signed_in? %>
+<!--<%= form_for(@blessing, :html => { :multipart => true }) do |f| %>-->
 <%= form_for(@blessing) do |f| %>
   <% if @blessing.errors.any? %>
   <% end %>
@@ -6,13 +7,16 @@
       <% if params[:name].nil? %>
     <div class="question"></div>
     <%= f.text_field :answer%>
+    <!--<%= f.file_field :avatar %>-->
     <%= f.hidden_field :day%>
+    <!--<%= f.submit %>-->
     <% else %>
     
     <div><br/><br/><br/></div>
     <% end %>
   </div>
 
+<% end %>
 <% end %>
 <% else if params[:name].nil? %>
 <div class="dashboard">

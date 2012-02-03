@@ -20,33 +20,29 @@ document.getElementById("whole").style.height = "2500px";
 
 <% if user_signed_in? %>
 
+
 <% if @blessings.empty? %>
-<div id="content" style="padding-top: 100px; max-width: 440px;">
-  
-   <div class="entry" style="min-height: 145px; padding: 20px;">
-    <span style="color: #a49d96; padding: 0px; line-height: 1em; padding: 0px;"><h3>Example</h3></span><br/>
-
-<div class="grat_block" style="margin-top: -20px;">
-<div class="ex_block">
-<ul id="gratitude" class="gmenu" style="list-style-position: outside;">
-  <li>1. Walking around Bernal hill in the morning</li>
-  <li>2. Persimmon pudding my mom makes</li>
-  <li>3. My bike</li>
-</ul>
-
-</div>
-<div class="hex" id="ex" style="padding-top: 7px;">
-Day 1
-   <div class="star">
-    <a href="/community" class="star_true"></a>
-</div>
-                                    
-</div>
-</div>
-  </div>
-</div>
-        
+  <div id="content" style="padding-top: 90px; max-width: 440px;">
+     <div class="entry" style="min-height: 145px; padding: 10px;">
+        <span style="color: #a49d96; padding: 0px; line-height: 1em;"><h3>Example</h3></span><br/>
+        <div class="grat_block" style="margin-top: -15px;">
+          <div class="ex_block">
+            <ul id="gratitude" class="gmenu" style="list-style-position: outside; margin-left: -30px;">
+              <li>1. Walking around Bernal hill in the morning</li>
+              <li>2. Persimmon pudding my mom makes</li>
+              <li>3. My bike</li>
+            </ul> 
+          </div>
+             <div id="research_info"><h1></h1></div>
+        <div class="hex" id="ex" style="margin-top: -10px;">
+	Day 1
+          <div class="star"><a href="/community" class="star_true"></a></div>                                     
+        </div>
+      </div>
+    </div>
+  </div>       
 <% end %>
+
 
 <% if @blessings %>
 		<div id="content">
@@ -58,6 +54,10 @@ Day 1
                           
                                                             <% @blessings.each do |blessing| %>
 <% if counter == 0 %>
+
+<!--<%= image_tag @blessing.avatar.url %>
+<%= image_tag @blessing.avatar.url(:medium) %>
+<%= image_tag @blessing.avatar.url(:thumb) %>-->
 					<div class="grat_block" id="<%= blessing.day%>">
 <div class="text_block">
 	

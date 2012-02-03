@@ -30,5 +30,8 @@ QuestionApp::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  # Paperclip options
+  # Paperclip.options[:command_path] = "/Users/olga/ImageMagick-6.7.5/bin"
 end
 

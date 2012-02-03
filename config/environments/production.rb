@@ -63,4 +63,8 @@ config.action_mailer.smtp_settings = {
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+   # Paperclip options
+  # Paperclip.options[:command_path] = "/Users/olga/ImageMagick-6.7.5/bin"
+  
 end

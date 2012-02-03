@@ -15,6 +15,8 @@ gem 'aws-ses', "0.4.2", :require => 'aws/ses'
 
 gem "friendly_id", "3.2.1"
 
+gem "paperclip", "~> 2.0"
+
 gem 'heroku', :group => :development
 
 group :test, :development do
