@@ -26,6 +26,7 @@ get '/logout', :to => 'sessions#destroy'
  #match 'users/:name' => 'blessings#index'
  #match 'sharedby/:name' => 'blessings#index'
  match 'community' => 'blessings#show'
+ match 'healthy' => 'blessings#display'
  match 'users' => 'blessings#new'
  match 'share/:day' => 'blessings#share'
 

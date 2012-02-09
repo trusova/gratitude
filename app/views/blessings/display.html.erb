@@ -1,0 +1,130 @@
+<STYLE TYPE="text/css" MEDIA="screen, projection">
+  @import url(/stylesheets/board.css);
+</STYLE>
+
+
+<script language="javascript">
+document.getElementById("whole").style.height = "3550px";
+</script>
+
+<style type="text/css">
+    body 
+    { 
+         background:
+	 #f7f5f5 url('/images/paper.jpg') repeat;
+
+    }
+    
+div.gratblock {
+  margin: 0 auto;
+  width: 450px;
+  height: 100%;
+}
+
+div.textblock {
+    background: rgba(255, 255, 255, 0.8);
+    width: 405px;
+    min-height: 350px;
+    padding: 15px;
+    padding-bottom: 5px;
+    padding-left: 90px;
+    min-height:90px;
+    float: right;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+     border-radius: 10px;
+}
+    
+ </style>
+	<div id="Header">
+	  
+    <div class="LiquidContainer HeaderContainer">
+        
+<a href="/" id="Pinterest"><img src="/images/logo_small.png" alt="Pinterest Logo" style="float:left; margin-left: -550px;"/></a>
+
+
+<ul id="Navigation">
+    
+    <li>
+        <a href="/about/" class="nav">about<span></span></a>
+        <ul>
+            <li><a href="/community">community</a></li>
+            <li><a href="/terms.html">terms</a></li>
+            <li class="beforeDivider"><a href="/privacy.html">privacy</a></li>
+           <!-- <li class="divider"><a href="/about/careers/">Careers</a></li>
+            <li><a href="/about/team/">Team</a></li>
+            <li><a href="http://blog.pinterest.com/">Blog</a></li>-->
+        </ul>
+    </li>
+    
+        <li><a href="/login/?next=/" class="nav LoginNav">login</a></li>
+    
+</ul>
+
+
+    </div>
+</div>
+
+<div class="main_content">
+<div id="wrapper">
+
+<% if @blessings %>
+		<div id="content">
+		<% counter = 0 %>
+<%   days = 0 %>      
+			<div style="margin-top: 115px;">
+							
+
+                          
+                                                            <% @blessings.each do |blessing| %>
+<% if counter == 0 %>
+					<div class="gratblock" style="float: left;">
+<div class="textblock" style="margin-left: 30px;">
+<div style="float:left; padding-left: 20px; padding-right: 20px;"><img src="/images/fig.jpg" width="200" alt="thumb"/></div>
+	
+<ul id="gratitude" class="gmenu" style="list-style-position: outside;">
+	<% end %>
+
+  <% counter += 1 %>
+  <% days += 1 %>
+
+	<li style="list-style-position:outside;"><span style="visibility: visible; padding: 0px; line-height: 1em;" id="num"><%=counter%>.</span> <%= blessing.answer %></li>   
+  <% if counter == 3 %>
+<script language="javascript">
+spans = document.getElementsByTagName("span");
+
+for (i=0;i<spans.length;i++)
+{
+//spans[i].style.visibility = 'hidden';
+}
+</script>
+  </ul>
+</div>
+<div class="hex" style="margin-left: -35px;" id="<%= blessing.day%>">Day <%= blessing.day%>
+   <div id="<%= blessing.day%>" style="width: 55px; padding-left: 10px; padding-top: 0px; float: left;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/community" data-width="70" data-show-faces="false">
+   </div>
+    <div style="padding-left: 6px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/community" data-count="none"  data-hashtags="gratitude">Tweet</a></div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                    
+</div>
+
+<p style="line-height: 0.8em;">&nbsp;</p>
+                                   
+
+</div>
+   
+ <% counter = 0 %>
+
+    <% end %>
+   
+			
+				
+                                <% end %>
+				</div>
+				
+			</div>
+			
+
+          <% end %>
+        </div>
+  </div>

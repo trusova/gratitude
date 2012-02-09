@@ -29,6 +29,18 @@ class BlessingsController < ApplicationController
       format.xml  { render :xml => @blessing }
     end
   end
+  
+    # GET /blessings/1
+  # GET /blessings/1.xml
+  def display
+        @blessing = Blessing.new
+    @blessings = Blessing.find(:all, :conditions => ["share = true"], :order => 'created_at DESC')
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @blessing }
+    end
+  end
 
   # GET /blessings/new
   # GET /blessings/new.xml
