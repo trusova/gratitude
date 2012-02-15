@@ -65,6 +65,18 @@ div#greeting h1 {
 	background: url('/images/whitetab_community.png') 100% 50% no-repeat;
 	}
 
+div#val h1 {
+	position: absolute;
+	right: 255px;
+	top: 65px;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+        min-height: 150px;
+        min-width: 350px;
+	background: url('/images/valentines_tab.png') 100% 50% no-repeat;
+	}
+
 div#feature h1.example {
 	position: absolute;
 	right: 55px;
