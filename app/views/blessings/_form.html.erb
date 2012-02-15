@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
-<!--<%= form_for(@blessing, :html => { :multipart => true }) do |f| %>-->
-<%= form_for(@blessing) do |f| %>
+<%= form_for(@blessing, :html => { :multipart => true }) do |f| %>
+<!--<%= form_for(@blessing) do |f| %>-->
   <% if @blessing.errors.any? %>
   <% end %>
   <div class="field" >

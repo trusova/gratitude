@@ -151,11 +151,17 @@ div.account#terms {
   }
   
 div.question {
-  background: url('/images/question_final.png') no-repeat center;
   min-height: 66px;
   padding-right: 150px;
+  background: url('/images/question_final.png') no-repeat center;
+
 }
 
+div.congrats {
+  min-height: 66px;
+  padding-right: 150px;
+   background: url('/images/congratulations_header.png') no-repeat center;  
+}
 
 body, p, ol, ul, td {
  font-family: 'Corben', cursive;
