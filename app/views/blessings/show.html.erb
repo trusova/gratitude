@@ -13,11 +13,8 @@ document.getElementById("whole").style.height = "4000px";
 <div class="main_content">
 <div id="wrapper">
 
-<div class="field">
-  <div class="question"></div>
-</div>
 <% if @blessings %>
-		<div id="content" style="margin-top: -310px;">
+		<div id="content">
 		<% counter = 0 %>
 <%   days = 0 %>      
 			<div style="margin-top: 215px;">
@@ -56,6 +53,8 @@ for (i=0;i<spans.length;i++)
 </div>
 
 <p style="line-height: 0.8em;">&nbsp;</p>
+                                    <div id="greeting"><h1></h1></div> 
+
 </div>
    
  <% counter = 0 %>
@@ -84,7 +83,7 @@ for (i=0;i<spans.length;i++)
 				
 				
 				<img id="bg3-1" src="/images/another_community.png" width="1000" alt="Traingle"/>
-				<img id="bg3-2" src="/images/bottomdash_community.png" width="1000" alt="Triangle"/>
+				<img id="bg3-2" src="/images/bottomdash_community.png" width="995" style="margin-top:-4px;" alt="Triangle"/>
 
 			
 				
