@@ -29,7 +29,7 @@ get '/logout', :to => 'sessions#destroy'
  match 'healthy' => 'blessings#display'
  match 'users' => 'blessings#new'
  match 'share/:day' => 'blessings#share'
- match 'valentine' => 'blessings#show'
+ match 'valentine' => 'blessings#holiday'
 
 #match ':name' => 'blessings#index'
 root :to => "blessings#new"

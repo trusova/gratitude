@@ -5,7 +5,7 @@ def daily_email(user_email)
 
     mail(   :to      => user_email,
             :from    => "reminder@gratitude.is",
-            :subject => "Valentine's for sharing!") do |format|
+            :subject => "What are you grateful for today?") do |format|
                 format.text
                 format.html
     end

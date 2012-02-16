@@ -56,6 +56,8 @@ for (i=0;i<spans.length;i++)
 </div>
 
 <p style="line-height: 0.8em;">&nbsp;</p>
+                                    <div id="val"><h1></h1></div> 
+
 </div>
    
  <% counter = 0 %>
@@ -75,16 +77,59 @@ for (i=0;i<spans.length;i++)
 				</article>
 				
 				<article id="about"></article>
-			
+				     <% days = 21 %>
+				    <% if days > 0 %>
+				 <nav id="primary" style="padding-top: 220px;">
+				<ul>
+                                  <% for i in 1..days %>
+					<li>
+                                          <% if i == 7 %>
+                                          <h1>Week 1</h1>
+                                          <% end %>
+                                          <% if i == 14 %>
+                                          <h1>Week 2</h1>
+                                          <% end %>
+                                          <% if i == 21 %>
+                                          <h1>Week 3</h1>
+                                          <% end %>
+						<a><%= i%></a>
+					</li>
+                                        <% end %>
+                                        
+                                  <% for j in days+1..21 %>
+					<li>
+						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
+                                        </li>
+                                  <% end %>
+				</ul>
+                                 </nav>
+                                 <% end %>
 					
 			</div>
 			
 			<!-- Parallax foreground -->
 					<div id="parallax-bg3">
+				<script language="javascript">
+				//document.getElementsByClassName("question")[0].style.visibility = "hidden";
+				document.getElementsByClassName("question")[0].style.background = "url(/images/congratulations_header.png) no-repeat center";
 				
+				</script>
+				<img id="bg3-1" src="/images/congratulationsdash_top.png" width="1000" alt="Traingle"/>
+				<img id="bg3-2" src="/images/congratulations_dash_bottom.png" width="1000" alt="Triangle"/>
+				<style type="text/css">
+				      body 
+				      { 
+					   background:
+					   #f7f5f5 url('/images/bg_community-1.png') repeat;
+				  
+				      }
+				      div.question {
+					margin-left: -30px;
+				      }
+				</style>
 				
-				<img id="bg3-1" src="/images/another_community.png" width="1000" alt="Traingle"/>
-				<img id="bg3-2" src="/images/bottomdash_community.png" width="1000" alt="Triangle"/>
+				<!--<img id="bg3-1" src="/images/top_dash.png" width="1000" alt="Traingle"/>
+				<img id="bg3-2" src="/images/bottom_dashboard.png" width="1000" alt="Triangle"/>-->
 
 			
 				
