@@ -8,7 +8,6 @@ gem 'rails', '3.0.7'
 gem 'mysql2', '0.2.7'
 
 gem "devise", "1.2.1"
-gem "engineyard", "1.3.17"
 gem "jquery-rails"
 gem "omniauth", "0.2.3"
 gem 'aws-ses', "0.4.2", :require => 'aws/ses'
