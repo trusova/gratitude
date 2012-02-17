@@ -25,7 +25,7 @@ end
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :cached_slug, :reminder, :email, :password, :password_confirmation, :remember_me
   has_many :authorizations
-  has_many :blessings
+  has_many :gratitudes
   has_many :subdomains, :dependent => :destroy 
   validates :name, :email, :presence => true
   validates_uniqueness_of :email, :case_sensitive => false

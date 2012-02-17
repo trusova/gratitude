@@ -10,12 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120217035743) do
+ActiveRecord::Schema.define(:version => 20120217051958) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
     t.string   "uid"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "days", :force => true do |t|
+    t.boolean  "is_public",  :default => false
+    t.integer  "count",      :default => 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,7 +38,10 @@ ActiveRecord::Schema.define(:version => 20120217035743) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "day_id"
   end
+
+  add_index "gratitudes", ["day_id"], :name => "index_gratitudes_on_day_id"
 
   create_table "slugs", :force => true do |t|
     t.string   "name"
@@ -53,8 +63,8 @@ ActiveRecord::Schema.define(:version => 20120217035743) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                              :null => false
-    t.string   "encrypted_password",   :limit => 128,                :null => false
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",                       :default => 0

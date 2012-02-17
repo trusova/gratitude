@@ -1,6 +1,8 @@
 class Gratitude < ActiveRecord::Base
 
 belongs_to :user
+belongs_to :day
+
 validates_presence_of :answer
 validates_presence_of :user
 

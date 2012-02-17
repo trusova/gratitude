@@ -20,7 +20,7 @@ gem 'heroku', :group => :development
 
 group :test, :development do
   gem "rspec-rails", "2.5.0"
-  gem "machinist", "1.0.6", :require => 'machinist/object'
+  gem 'machinist', '>= 2.0.0.beta2'
   gem "faker", "0.9.5"
   gem "nokogiri", "1.4.4"
   gem "jasmine"
