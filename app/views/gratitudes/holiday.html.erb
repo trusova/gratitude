@@ -1,63 +1,32 @@
 
-<style type="text/css" media="screen">
-  #custom-tweet-button a {
-    display: block;
-    background: url('/images/twitter_bird.png') center no-repeat;
-    float: left;
-    padding-left: 2px;
-    text-decoration: none;
-  }
-</style>
-
 <script language="javascript">
-document.getElementById("whole").style.height = "3500px";
+document.getElementById("whole").style.height = "4000px";
 </script>
 
+<style type="text/css">
+    body 
+    { 
+         background: url('/images/bg_community.png') repeat top #cabfb1;
+
+    }
+ </style>
 <div class="main_content">
 <div id="wrapper">
-  
-<%= render 'form' %>
 
-<% if user_signed_in? %>
-
-<% if @blessings.empty? %>
-  <div id="content" style="padding-top: 90px; max-width: 440px;">
-     <div class="entry" style="min-height: 145px; padding: 10px;">
-        <span style="color: #a49d96; padding: 0px; line-height: 1em;"><h3>Example</h3></span><br/>
-        <div class="grat_block" style="margin-top: -15px;">
-          <div class="ex_block">
-            <ul id="gratitude" class="gmenu" style="list-style-position: outside; margin-left: -30px;">
-              <li>1. Walking around Bernal hill in the morning</li>
-              <li>2. Persimmon pudding my mom makes</li>
-              <li>3. My bike</li>
-            </ul> 
-          </div>
-             <div id="research_info"><h1></h1></div>
-        <div class="hex" id="ex" style="margin-top: -10px;">
-	Day 1
-          <div class="star"><a href="/community" class="star_true"></a></div>                                     
-        </div>
-      </div>
-    </div>
-  </div>       
-<% end %>
-
-
-<% if @blessings %>
-		<div id="content">
+<div class="field">
+  <div class="question"></div>
+</div>
+<% if @gratitudes %>
+		<div id="content" style="margin-top: -310px;">
 		<% counter = 0 %>
 <%   days = 0 %>      
-			<div>
+			<div style="margin-top: 215px;">
 							<article id="manned-flight">
 
                           
-                                                            <% @blessings.each do |blessing| %>
+                                                            <% @gratitudes.each do |blessing| %>
 <% if counter == 0 %>
-
-<!--<%= image_tag @blessing.avatar.url %>
-<%= image_tag @blessing.avatar.url(:medium) %>
-<%= image_tag @blessing.avatar.url(:thumb) %>-->
-					<div class="grat_block" id="<%= blessing.day%>">
+					<div class="grat_block">
 <div class="text_block">
 	
 <ul id="gratitude" class="gmenu" style="list-style-position: outside;">
@@ -65,14 +34,10 @@ document.getElementById("whole").style.height = "3500px";
 
   <% counter += 1 %>
   <% days += 1 %>
-     <script language="javascript">
-            var days = <%= days/3 %> + 1;
-                                    document.getElementById("blessing_day").value = days;
-                                  </script>
+
 	<li style="list-style-position:outside;"><span style="visibility: visible; padding: 0px; line-height: 1em;" id="num"><%=counter%>.</span> <%= blessing.answer %></li>   
   <% if counter == 3 %>
 <script language="javascript">
-
 spans = document.getElementsByTagName("span");
 
 for (i=0;i<spans.length;i++)
@@ -82,25 +47,26 @@ for (i=0;i<spans.length;i++)
 </script>
   </ul>
 </div>
-                                    <div id="feature"><h1></h1></div> 
 
-<div class="hex">Day <%= blessing.day%>
-     <div class="star">
-    <a href="/share/<%= blessing.day%>" class="star_<%= blessing.share%>"></a>
-</div>
-     
-      
+<div class="hex" id="<%= blessing.day%>">Day <%= blessing.day%>
+   <div id="<%= blessing.day%>" style="width: 55px; padding-left: 10px; padding-top: 0px; float: left;" class="fb-like" data-layout="button_count" data-send="false" data-url="http://gratitude.is/community" data-width="70" data-show-faces="false">
+   </div>
+    <div style="padding-left: 6px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gratitude.is/community" data-count="none"  data-hashtags="gratitude">Tweet</a></div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                    
 </div>
 
 <p style="line-height: 0.8em;">&nbsp;</p>
+                                    <div id="val"><h1></h1></div> 
 
 </div>
-                                        
-
+   
  <% counter = 0 %>
 
-    <% end %>				
-                              <% end %>
+    <% end %>
+   
+			
+				
+                                <% end %>
 				</article></div>
 				<article id="frameless-parachute">
 					
@@ -110,15 +76,12 @@ for (i=0;i<spans.length;i++)
 					
 				</article>
 				
-				<article id="about">
-                                  
-                                </article>
-                                                
-
-                                <% if days > 0 %>
-				 <nav id="primary">
+				<article id="about"></article>
+				     <% days = 21 %>
+				    <% if days > 0 %>
+				 <nav id="primary" style="padding-top: 220px;">
 				<ul>
-                                  <% for i in 1..days/3 %>
+                                  <% for i in 1..days %>
 					<li>
                                           <% if i == 7 %>
                                           <h1>Week 1</h1>
@@ -129,11 +92,11 @@ for (i=0;i<spans.length;i++)
                                           <% if i == 21 %>
                                           <h1>Week 3</h1>
                                           <% end %>
-						<a  href="#<%= i%>"><%= i%></a>
+						<a><%= i%></a>
 					</li>
                                         <% end %>
                                         
-                                  <% for j in days/3+1..21 %>
+                                  <% for j in days+1..21 %>
 					<li>
 						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
                                         </li>
@@ -141,14 +104,11 @@ for (i=0;i<spans.length;i++)
 				</ul>
                                  </nav>
                                  <% end %>
+					
 			</div>
-				
+			
 			<!-- Parallax foreground -->
-			<div id="parallax-bg3">
-				<% if days/3 >= 21 %>
-				<script language="javascript">
-				document.getElementById("q").style.background.url = "/images/congratulations_header.png";
-				</script>
+					<div id="parallax-bg3">
 				<script language="javascript">
 				//document.getElementsByClassName("question")[0].style.visibility = "hidden";
 				document.getElementsByClassName("question")[0].style.background = "url(/images/congratulations_header.png) no-repeat center";
@@ -167,11 +127,13 @@ for (i=0;i<spans.length;i++)
 					margin-left: -30px;
 				      }
 				</style>
-				<% else %>
-				<img id="bg3-1" src="/images/top_dash.png" width="1000" alt="Traingle"/>
-				<img id="bg3-2" src="/images/bottom_dashboard.png" width="1000" alt="Triangle"/>
+				
+				<!--<img id="bg3-1" src="/images/top_dash.png" width="1000" alt="Traingle"/>
+				<img id="bg3-2" src="/images/bottom_dashboard.png" width="1000" alt="Triangle"/>-->
 
-				<% end %>
+			
+				
+			    
 				<!--<img id="bg3-4" src="/images/lite_blue_hexa2.png" width="980" alt="Triangle"/>-->
 			</div>
 			
@@ -179,17 +141,16 @@ for (i=0;i<spans.length;i++)
 			<div id="parallax-bg2">
 				<img id="bg2-3" src="/images/clouds.png" alt="cloud"/>
 				<img id="bg2-4" src="/images/clouds_small.png" alt="cloud"/>
-                                <!--<img id="bg2-5" src="/images/clouds_trees.png" alt="cloud"/>-->
+                               <!-- <img id="bg2-5" src="/images/clouds_trees.png" alt="cloud"/>-->
 			</div>
 			
 			<!-- Parallax  background clouds -->
 			<div id="parallax-bg1">
 				<img id="bg1-2" src="/images/hexagons_2.png" alt="cloud"/>
 				<img id="bg1-3" src="/images/hexagons_2_flip.png" alt="cloud" />
-                                <img id="bg1-5" src="/images/bottom_graphic2.png" alt="trees"/>
+                                <img id="bg1-6" src="/images/bottom_graphic2.png" alt="trees"/>
 			</div>
 
           <% end %>
-        <% end %>
         </div>
   </div>

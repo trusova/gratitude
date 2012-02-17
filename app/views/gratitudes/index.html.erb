@@ -8,7 +8,7 @@ document.getElementById("whole").style.height = "2500px";
   
 <%= render 'form' %>
 
-<% if @blessings.empty? %>
+<% if @gratitudes.empty? %>
 <div id="content" style="padding-top: 100px; max-width: 440px;">
         <div  class="entry">
 <div class="heading">
@@ -32,7 +32,7 @@ and <a href="http://www.faculty.ucr.edu/~sonja/" target="_blank">happiness</a> r
         
 <% end %>
 
-<% if @blessings %>
+<% if @gratitudes %>
 		<div id="content">
 		<% counter = 0 %>
 <%   days = 0 %>      
@@ -40,7 +40,7 @@ and <a href="http://www.faculty.ucr.edu/~sonja/" target="_blank">happiness</a> r
 							<article id="manned-flight">
 
                           
-                                                            <% @blessings.each do |blessing| %>
+                                                            <% @gratitudes.each do |blessing| %>
 <% if counter == 0 %>
 					<div class="grat_block">
 <div class="text_block">

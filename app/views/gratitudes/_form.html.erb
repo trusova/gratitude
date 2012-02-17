@@ -1,15 +1,15 @@
 <% if user_signed_in? %>
-<%= form_for(@blessing, :html => { :multipart => true }) do |f| %>
-<!--<%= form_for(@blessing) do |f| %>-->
-  <% if @blessing.errors.any? %>
+<%= form_for(@gratitude, :html => { :multipart => true }) do |f| %>
+<!--<%= form_for(@gratitude) do |f| %>-->
+  <% if @gratitude.errors.any? %>
   <% end %>
   <div class="field" >
       <% if params[:name].nil? %>
     <div class="question"></div>
     <%= f.text_field :answer%>
-    <!--<%= f.file_field :avatar %>-->
+    <%#= f.file_field :avatar %>
     <%= f.hidden_field :day%>
-    <!--<%= f.submit %>-->
+    <%#= f.submit %>
     <% else %>
     
     <div><br/><br/><br/></div>

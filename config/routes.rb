@@ -25,16 +25,16 @@ get '/logout', :to => 'sessions#destroy'
  #root :to => "home#index"
  #match 'users/:name' => 'blessings#index'
  #match 'sharedby/:name' => 'blessings#index'
- match 'community' => 'blessings#show'
- match 'healthy' => 'blessings#display'
- match 'users' => 'blessings#new'
- match 'share/:day' => 'blessings#share'
- match 'valentine' => 'blessings#holiday'
+ match 'community' => 'gratitudes#show'
+ match 'healthy' => 'gratitudes#display'
+ match 'users' => 'gratitudes#new'
+ match 'share/:day' => 'gratitudes#share'
+ match 'valentine' => 'gratitudes#holiday'
+
+resources :gratitudes
 
 #match ':name' => 'blessings#index'
-root :to => "blessings#new"
-
-  resources :blessings
+root :to => "gratitudes#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

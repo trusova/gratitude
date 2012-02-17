@@ -13,7 +13,7 @@ document.getElementById("whole").style.height = "4000px";
 <div class="main_content">
 <div id="wrapper">
 
-<% if @blessings %>
+<% if @gratitudes %>
 		<div id="content">
 		<% counter = 0 %>
 <%   days = 0 %>      
@@ -21,7 +21,7 @@ document.getElementById("whole").style.height = "4000px";
 							<article id="manned-flight">
 
                           
-                                                            <% @blessings.each do |blessing| %>
+                                                            <% @gratitudes.each do |blessing| %>
 <% if counter == 0 %>
 					<div class="grat_block">
 <div class="text_block">
