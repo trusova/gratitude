@@ -21,7 +21,7 @@ document.getElementById("whole").style.height = "3500px";
 <% if user_signed_in? %>
 
 <%# if @gratitudes.empty? %>
-<% if false %>
+<% if @gratitude_list.days.empty? || @gratitude_list.days.first.gratitudes.length == 0 %>
   <div id="content" style="padding-top: 90px; max-width: 440px;">
      <div class="entry" style="min-height: 145px; padding: 10px;">
         <span style="color: #a49d96; padding: 0px; line-height: 1em;"><h3>Example</h3></span><br/>
@@ -41,173 +41,92 @@ document.getElementById("whole").style.height = "3500px";
       </div>
     </div>
   </div>       
+<% else %>
+<div id="content">
+  <div>
+    <article id="manned-flight">
+      <% @gratitude_list.days.each do |day| %>
+      <div class="grat_block" id="<%= day.count%>">
+	<div class="text_block">	
+	  <ul id="gratitude" class="gmenu" style="list-style-position: outside;">
+	    <% day.gratitudes.each_with_index do |gratitude,index| %>
+		  <li style="list-style-position:outside;"><span style="visibility: visible; padding: 0px; line-height: 1em;" id="num"><%= index + 1 %>.</span> <%= gratitude.answer %></li>
+	    <% end %>		  
+	  </ul>
+	</div>
+	<div id="feature"><h1></h1></div> 
+	
+	<div class="hex">Day <%= day.count %>
+	  <div class="star">
+	    <a href="/share/<%= day.count %>" class="star_<%= day.is_public %>"></a>
+	  </div>
+	</div>
+      </div>
+      <p style="line-height: 0.8em;">&nbsp;</p>
+      <% end %>
+    </article>
+  </div>
 <% end %>
 
-<h1><%= @gratitude_list.days.length %></h1>
+<article id="frameless-parachute"></article>				
+<article id="english-channel"></article>
+<article id="about"></article>
+  <nav id="primary">
+    <ul>
+      <% @gratitude_list.days.each_with_index do |day,index| %>
+      <li>
+	<% if index + 1 == 7 %>
+	  <h1>Week 1</h1>
+	<% end %>
+	<% if index + 1 == 14 %>
+	  <h1>Week 2</h1>
+	    <% end %>
+	    <% if index + 1 == 21 %>
+	      <h1>Week 3</h1>
+	    <% end %>
+	    <a  href="#<%= index + 1 %>"><%= index + 1 %></a>
+      </li>
+      <% end %>
 
-<% @gratitude_list.days.each do |day| %>
-<ol style="overflow:hidden; display: block;">
-<li style="display:block;">
-  Day: <%= day.count %>>
-  <ol>
-    <% day.gratitudes.each do |gratitude| %>
-    <li>
-      <%= gratitude.answer %>
-    </li>
-    <% end %>
-  </ol>
-</li>
-</ol>
-<% end %>
-
-
-<% if @gratitudes %>
-		<div id="content">
-		<% counter = 0 %>
-<%   days = 0 %>      
-			<div>
-							<article id="manned-flight">
-
-                          
-                                                            <% @gratitudes.each do |blessing| %>
-<% if counter == 0 %>
+      <% for day_index in (@gratitude_list.days.length + 1)..21 %>
+	<li>
+	  <a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= day_index %></a>
+	</li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
 
 <%#= image_tag @gratitude.avatar.url %>
 <%#= image_tag @gratitude.avatar.url(:medium) %>
 <%#= image_tag @gratitude.avatar.url(:thumb) %>
-					<div class="grat_block" id="<%= blessing.day%>">
-<div class="text_block">
+		     
+
+				 	
+    <!-- Parallax foreground -->
+    <div id="parallax-bg3">
+	    <img id="bg3-1" src="/images/top_dash.png" width="1000" alt="Traingle"/>
+	    <img id="bg3-2" src="/images/bottom_dashboard.png" width="1000" alt="Triangle"/>
+	    <img id="bg3-4" src="/images/lite_blue_hexa2.png" width="980" alt="Triangle"/>
+    </div>
+    
+    <!-- Parallax  midground clouds -->
+    <div id="parallax-bg2">
+	    <img id="bg2-3" src="/images/clouds.png" alt="cloud"/>
+	    <img id="bg2-4" src="/images/clouds_small.png" alt="cloud"/>
+    </div>
+    
+    <!-- Parallax  background clouds -->
+    <div id="parallax-bg1">
+	    <img id="bg1-2" src="/images/hexagons_2.png" alt="cloud"/>
+	    <img id="bg1-3" src="/images/hexagons_2_flip.png" alt="cloud" />
+	    <img id="bg1-5" src="/images/bottom_graphic2.png" alt="trees"/>
+    </div>
 	
-<ul id="gratitude" class="gmenu" style="list-style-position: outside;">
-	<% end %>
-
-  <% counter += 1 %>
-  <% days += 1 %>
-     <script language="javascript">
-            var days = <%= days/3 %> + 1;
-                                    document.getElementById("blessing_day").value = days;
-                                  </script>
-	<li style="list-style-position:outside;"><span style="visibility: visible; padding: 0px; line-height: 1em;" id="num"><%=counter%>.</span> <%= blessing.answer %></li>   
-  <% if counter == 3 %>
-<script language="javascript">
-
-spans = document.getElementsByTagName("span");
-
-for (i=0;i<spans.length;i++)
-{
-//spans[i].style.visibility = 'hidden';
-}
-</script>
-  </ul>
-</div>
-                                    <div id="feature"><h1></h1></div> 
-
-<div class="hex">Day <%= blessing.day%>
-     <div class="star">
-    <a href="/share/<%= blessing.day%>" class="star_<%= blessing.share%>"></a>
-</div>
-     
-      
-</div>
-
-<p style="line-height: 0.8em;">&nbsp;</p>
-
-</div>
-                                        
-
- <% counter = 0 %>
-
-    <% end %>				
-                              <% end %>
-				</article></div>
-				<article id="frameless-parachute">
-					
-				</article>
-				
-				<article id="english-channel">
-					
-				</article>
-				
-				<article id="about">
-                                  
-                                </article>
-                                                
-
-                                <% if days > 0 %>
-				 <nav id="primary">
-				<ul>
-                                  <% for i in 1..days/3 %>
-					<li>
-                                          <% if i == 7 %>
-                                          <h1>Week 1</h1>
-                                          <% end %>
-                                          <% if i == 14 %>
-                                          <h1>Week 2</h1>
-                                          <% end %>
-                                          <% if i == 21 %>
-                                          <h1>Week 3</h1>
-                                          <% end %>
-						<a  href="#<%= i%>"><%= i%></a>
-					</li>
-                                        <% end %>
-                                        
-                                  <% for j in days/3+1..21 %>
-					<li>
-						<a style="background: url('/images/hex_side_outline_lite.png') 4px 4px no-repeat; color: #bbd9d5;"><%= j%></a>
-                                        </li>
-                                  <% end %>
-				</ul>
-                                 </nav>
-                                 <% end %>
-			</div>
-				
-			<!-- Parallax foreground -->
-			<div id="parallax-bg3">
-				<% if days/3 >= 21 %>
-				<script language="javascript">
-				document.getElementById("q").style.background.url = "/images/congratulations_header.png";
-				</script>
-				<script language="javascript">
-				//document.getElementsByClassName("question")[0].style.visibility = "hidden";
-				document.getElementsByClassName("question")[0].style.background = "url(/images/congratulations_header.png) no-repeat center";
-				
-				</script>
-				<img id="bg3-1" src="/images/congratulationsdash_top.png" width="1000" alt="Traingle"/>
-				<img id="bg3-2" src="/images/congratulations_dash_bottom.png" width="1000" alt="Triangle"/>
-				<style type="text/css">
-				      body 
-				      { 
-					   background:
-					   #f7f5f5 url('/images/bg_community-1.png') repeat;
-				  
-				      }
-				      div.question {
-					margin-left: -30px;
-				      }
-				</style>
-				<% else %>
-				<!--<img id="bg3-1" src="/images/top_dash.png" width="1000" alt="Traingle"/>
-				<img id="bg3-2" src="/images/bottom_dashboard.png" width="1000" alt="Triangle"/>-->
-
-				<% end %>
-				<!--<img id="bg3-4" src="/images/lite_blue_hexa2.png" width="980" alt="Triangle"/>-->
-			</div>
-			
-			<!-- Parallax  midground clouds -->
-			<div id="parallax-bg2">
-				<img id="bg2-3" src="/images/clouds.png" alt="cloud"/>
-				<img id="bg2-4" src="/images/clouds_small.png" alt="cloud"/>
-                                <!--<img id="bg2-5" src="/images/clouds_trees.png" alt="cloud"/>-->
-			</div>
-			
-			<!-- Parallax  background clouds -->
-			<div id="parallax-bg1">
-				<img id="bg1-2" src="/images/hexagons_2.png" alt="cloud"/>
-				<img id="bg1-3" src="/images/hexagons_2_flip.png" alt="cloud" />
-                                <img id="bg1-5" src="/images/bottom_graphic2.png" alt="trees"/>
-			</div>
-
-          <% end %>
-        <% end %>
+	
+	
+    <% end %>	
+	
+	
         </div>
   </div>

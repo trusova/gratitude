@@ -4,8 +4,7 @@ html {
 	}
         
 body {
-  /*background: url('/images/bg_half_4bit.jpg') repeat top #cabfb1;*/
-  background: url('/images/paper.jpg') repeat top #cabfb1;
+  background: url('/images/bg_half_4bit.jpg') repeat top #cabfb1;
   /*background: url('/images/gradient_slice.png') repeat-x top #cabfb1;*/
   text-align: center;
   position: relative;
