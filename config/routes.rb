@@ -31,10 +31,13 @@ get '/logout', :to => 'sessions#destroy'
  match 'share/:day' => 'gratitudes#share'
  match 'valentine' => 'gratitudes#holiday'
 
+resources :gratitude_lists
+ match 'list', :controller => "GratitudeLists", :action => "list"
+
 resources :gratitudes
 
 #match ':name' => 'blessings#index'
-root :to => "gratitudes#new"
+root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

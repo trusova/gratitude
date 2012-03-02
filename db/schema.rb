@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120217051958) do
+ActiveRecord::Schema.define(:version => 20120302033609) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -21,8 +21,15 @@ ActiveRecord::Schema.define(:version => 20120217051958) do
   end
 
   create_table "days", :force => true do |t|
-    t.boolean  "is_public",  :default => false
-    t.integer  "count",      :default => 1
+    t.boolean  "is_public",         :default => false
+    t.integer  "count",             :default => 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "gratitude_list_id"
+  end
+
+  create_table "gratitude_lists", :force => true do |t|
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,8 +38,6 @@ ActiveRecord::Schema.define(:version => 20120217051958) do
     t.string   "answer"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
-    t.integer  "day",                 :default => 1
     t.boolean  "share",               :default => false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
@@ -63,8 +68,8 @@ ActiveRecord::Schema.define(:version => 20120217051958) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "email",                                              :null => false
+    t.string   "encrypted_password",   :limit => 128,                :null => false
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",                       :default => 0

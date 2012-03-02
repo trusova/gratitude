@@ -78,26 +78,27 @@ class GratitudesController < ApplicationController
   # POST /gratitudes
   # POST /gratitudes.xml
   def create
-    
     #omniauth = request.env['omniauth.auth']
     
+    gratitude_params = params[:gratitude]
+    day_id = gratitude_params[:day_id]
+    
     if user_signed_in?
-    @gratitude = Gratitude.new(params[:gratitude].merge(:user => current_user))
+      @gratitude = Gratitude.new(:answer => gratitude_params[:answer],
+                                 :day_id => day_id)
+    else
+     redirect_to sign_in_path
+    end
+
+    puts "gratitude: #{@gratitude.inspect}"
 
     respond_to do |format|
       if @gratitude.save
-        format.html { redirect_to(new_gratitude_path, :notice => 'Gratitude was successfully created.') }
-        format.xml  { render :xml => @gratitude, :status => :created, :location => @gratitude }
+        format.html { redirect_to(list_path, :notice => 'Gratitude was successfully created.') }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @gratitude.errors, :status => :unprocessable_entity }
+        format.html { redirect_to(list_path, :notice => 'Gratitude was NOT successfully created.') }
       end
     end
-    else
-     redirect_to root_path
-    end
-    
-    
   end
 
   # PUT /gratitudes/1

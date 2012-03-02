@@ -20,8 +20,9 @@ document.getElementById("whole").style.height = "3500px";
 
 <% if user_signed_in? %>
 
-<% if @gratitudes.empty? %>
-  <!--<div id="content" style="padding-top: 90px; max-width: 440px;">
+<%# if @gratitudes.empty? %>
+<% if false %>
+  <div id="content" style="padding-top: 90px; max-width: 440px;">
      <div class="entry" style="min-height: 145px; padding: 10px;">
         <span style="color: #a49d96; padding: 0px; line-height: 1em;"><h3>Example</h3></span><br/>
         <div class="grat_block" style="margin-top: -15px;">
@@ -39,7 +40,24 @@ document.getElementById("whole").style.height = "3500px";
         </div>
       </div>
     </div>
-  </div>   -->    
+  </div>       
+<% end %>
+
+<h1><%= @gratitude_list.days.length %></h1>
+
+<% @gratitude_list.days.each do |day| %>
+<ol style="overflow:hidden; display: block;">
+<li style="display:block;">
+  Day: <%= day.count %>>
+  <ol>
+    <% day.gratitudes.each do |gratitude| %>
+    <li>
+      <%= gratitude.answer %>
+    </li>
+    <% end %>
+  </ol>
+</li>
+</ol>
 <% end %>
 
 
